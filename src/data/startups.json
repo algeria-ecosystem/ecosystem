@@ -1,0 +1,69 @@
+[
+  {
+    "name": "Yassir",
+    "foundedYear": 2017,
+    "categoryId": "logistics",
+    "website": "https://yassir.com",
+    "linkedin": "https://linkedin.com/company/yassir"
+  },
+  {
+    "name": "TemTem One",
+    "foundedYear": 2019,
+    "categoryId": "logistics",
+    "website": "https://temtemone.com",
+    "linkedin": "https://linkedin.com/company/temtemone"
+  },
+  {
+    "name": "Emploitic",
+    "foundedYear": 2006,
+    "categoryId": "marketplace",
+    "website": "https://emploitic.com",
+    "linkedin": "https://linkedin.com/company/emploitic"
+  },
+  {
+    "name": "Batolis",
+    "foundedYear": 2020,
+    "categoryId": "ecommerce",
+    "website": "https://batolis.com"
+  },
+  {
+    "name": "Waitero",
+    "foundedYear": 2021,
+    "categoryId": "saas",
+    "website": "https://waitero.com",
+    "linkedin": "https://linkedin.com/company/waitero"
+  },
+  {
+    "name": "Sidra",
+    "foundedYear": 2019,
+    "categoryId": "fintech",
+    "website": "https://sidra.dz",
+    "linkedin": "https://linkedin.com/company/sidra-dz"
+  },
+  {
+    "name": "Khibra Tech",
+    "foundedYear": 2018,
+    "categoryId": "edtech",
+    "website": "https://khibra.tech",
+    "linkedin": "https://linkedin.com/company/khibra-tech"
+  },
+  {
+    "name": "Tabib.dz",
+    "foundedYear": 2020,
+    "categoryId": "healthtech",
+    "website": "https://tabib.dz"
+  },
+  {
+    "name": "Fellahtna",
+    "foundedYear": 2019,
+    "categoryId": "agritech",
+    "website": "https://fellahtna.com",
+    "linkedin": "https://linkedin.com/company/fellahtna"
+  },
+  {
+    "name": "Numidya",
+    "foundedYear": 2022,
+    "categoryId": "fintech",
+    "website": "https://numidya.com"
+  }
+]
