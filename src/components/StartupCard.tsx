@@ -1,4 +1,4 @@
-import { ExternalLink, Linkedin, Calendar, Building2 } from 'lucide-react';
+import { ExternalLink, Linkedin } from 'lucide-react';
 import type { Startup, Category } from '@/types';
 
 interface StartupCardProps {
@@ -10,64 +10,61 @@ const StartupCard = ({ startup, category }: StartupCardProps) => {
   const faviconUrl = `https://www.google.com/s2/favicons?domain=${startup.website}&sz=64`;
 
   return (
-    <article className="group relative bg-card rounded-lg border border-border p-5 card-shadow transition-smooth hover:card-shadow-hover hover:border-primary/20">
+    <article className="group relative bg-card rounded-xl border border-border p-5 transition-smooth hover:border-primary/30 hover:card-shadow-hover">
+      {/* Header: Logo + Name + External Link */}
       <div className="flex items-start gap-4">
         {/* Logo */}
-        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-secondary flex items-center justify-center overflow-hidden">
+        <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-secondary/50 flex items-center justify-center overflow-hidden">
           <img
             src={faviconUrl}
             alt={`${startup.name} logo`}
-            className="w-8 h-8 object-contain"
+            className="w-7 h-7 object-contain"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.style.display = 'none';
-              target.parentElement!.innerHTML = `<span class="text-lg font-semibold text-muted-foreground">${startup.name.charAt(0)}</span>`;
+              target.parentElement!.innerHTML = `<span class="text-base font-semibold text-primary">${startup.name.charAt(0)}</span>`;
             }}
           />
         </div>
 
-        {/* Content */}
+        {/* Name & Category */}
         <div className="flex-1 min-w-0">
-          <h3 className="font-semibold text-card-foreground truncate group-hover:text-primary transition-smooth">
+          <h3 className="font-semibold text-card-foreground truncate">
             {startup.name}
           </h3>
-          
-          <div className="flex items-center gap-3 mt-1.5 text-sm text-muted-foreground">
-            {category && (
-              <span className="inline-flex items-center gap-1">
-                <Building2 className="w-3.5 h-3.5" />
-                {category.name}
-              </span>
-            )}
-            <span className="inline-flex items-center gap-1">
-              <Calendar className="w-3.5 h-3.5" />
-              {startup.foundedYear}
-            </span>
-          </div>
+          {category && (
+            <p className="text-sm text-primary mt-0.5">{category.name}</p>
+          )}
         </div>
-      </div>
 
-      {/* Links */}
-      <div className="flex items-center gap-2 mt-4 pt-4 border-t border-border">
+        {/* External Link */}
         <a
           href={startup.website}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-smooth"
+          className="flex-shrink-0 w-8 h-8 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-smooth"
+          aria-label={`Visit ${startup.name} website`}
         >
           <ExternalLink className="w-4 h-4" />
-          Website
         </a>
+      </div>
+
+      {/* Details */}
+      <div className="flex items-center gap-8 mt-5 pt-4 border-t border-border/50">
+        <div>
+          <p className="text-xs text-muted-foreground mb-1">Founded</p>
+          <p className="text-sm font-medium text-primary">{startup.foundedYear}</p>
+        </div>
         
         {startup.linkedin && (
           <a
             href={startup.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth ml-auto"
+            className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-smooth ml-auto"
           >
             <Linkedin className="w-4 h-4" />
-            LinkedIn
+            <span className="text-xs">LinkedIn</span>
           </a>
         )}
       </div>
