@@ -56,6 +56,10 @@
     "name": "HealthTech"
   },
   {
+    "id": "hrtech",
+    "name": "HRTech"
+  },
+  {
     "id": "industrial",
     "name": "Industrial"
   },
