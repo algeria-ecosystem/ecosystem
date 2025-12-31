@@ -38,6 +38,16 @@
     "name": "State of SWE in Algeria",
     "description": "A comprehensive report on the state of software engineering in Algeria.",
     "url": "https://state-of-algeria.dev"
+  },
+  {
+    "name": "APRCE",
+    "description": "The Regulatory Authority of Post and Electronic Communications (ARPCE). An independent Algerian institution responsible for regulating the post and telecommunications sectors in the country.",
+    "url": "https://www.arpce.dz"
+  },
+  {
+    "name": "CERIST",
+    "description": "Algeria's primary public research center for Information Systems and Technologies (IST), focusing on scientific/technical info, digital security (DZ-CERT), cloud services, and innovation, under the Ministry of Higher Education and Scientific Research.",
+    "url": "https://www.cerist.dz"
   }
 ]
 
