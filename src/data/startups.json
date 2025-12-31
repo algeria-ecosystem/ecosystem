@@ -458,6 +458,16 @@
     "linkedin": "https://linkedin.com/company/maystro-delivery"
   },
   {
+    "name": "Mizbar",
+    "foundedYear": 2025,
+    "categoryIds": [
+      "ai",
+      "saas"
+    ],
+    "website": "https://mizbar.ai",
+    "linkedin": "https://www.linkedin.com/company/mezbar"
+  },
+  {
     "name": "Merch By Dz",
     "foundedYear": 2023,
     "categoryIds": [
@@ -579,6 +589,16 @@
     "linkedin": "https://linkedin.com/company/prizyglobal"
   },
   {
+    "name": "ProntoPlan",
+    "foundedYear": 2025,
+    "categoryIds": [
+      "logistics",
+      "saas"
+    ],
+    "website": "https://prontoplan.dz",
+    "linkedin": "https://www.linkedin.com/company/pronto-plan"
+  },
+  {
     "name": "Qareeb",
     "foundedYear": 2023,
     "categoryIds": [
@@ -679,6 +699,17 @@
     "linkedin": "https://linkedin.com/company/siine"
   },
   {
+    "name": "Skillsio",
+    "foundedYear": 2025,
+    "categoryIds": [
+      "hrtech",
+      "saas",
+      "ai"
+    ],
+    "website": "https://skillsio.net",
+    "linkedin": "https://www.linkedin.com/company/skillsio-net"
+  },
+  {
     "name": "Simpacte",
     "foundedYear": 2022,
     "categoryIds": [
@@ -724,6 +755,16 @@
     "linkedin": "https://linkedin.com/company/talabastore"
   },
   {
+    "name": "Tutorios",
+    "foundedYear": 2025,
+    "categoryIds": [
+      "edtech",
+      "saas"
+    ],
+    "website": "https://tutorios.net",
+    "linkedin": "https://www.linkedin.com/company/tutorios"
+  },
+  {
     "name": "Talentech",
     "foundedYear": 2019,
     "categoryIds": [
@@ -736,6 +777,7 @@
     "name": "Talenteo HR",
     "foundedYear": 2022,
     "categoryIds": [
+      "hrtech",
       "saas"
     ],
     "website": "https://talenteo.com",
