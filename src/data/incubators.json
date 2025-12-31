@@ -8,13 +8,6 @@
     "mapLocation": "https://maps.app.goo.gl/tXuA5AQN11RQBMkx5"
   },
   {
-    "name": "IdeaCrafters",
-    "foundedYear": 2025,
-    "website": "https://ideacrafters.com",
-    "linkedin": "https://www.linkedin.com/company/ideacrafters",
-    "city": "Algiers"
-  },
-  {
     "name": "Crearena",
     "foundedYear": 2020,
     "website": "https://crearena.io",
@@ -28,6 +21,13 @@
     "website": "https://djazairia.com",
     "city": "Algiers",
     "mapLocation": "https://maps.app.goo.gl/EhQwwiGx64Zee6kt8"
+  },
+  {
+    "name": "IdeaCrafters",
+    "foundedYear": 2025,
+    "website": "https://ideacrafters.com",
+    "linkedin": "https://www.linkedin.com/company/ideacrafters",
+    "city": "Algiers"
   },
   {
     "name": "Incubia",
