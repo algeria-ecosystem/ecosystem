@@ -1,11 +1,11 @@
 [
   {
-    "id": "agritech",
-    "name": "AgriTech"
-  },
-  {
     "id": "ai",
     "name": "AI"
+  },
+  {
+    "id": "agritech",
+    "name": "AgriTech"
   },
   {
     "id": "cloudtech",

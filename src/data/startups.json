@@ -1,5 +1,14 @@
 [
   {
+    "name": "AhlQuran",
+    "foundedYear": 2022,
+    "categoryIds": [
+      "edtech"
+    ],
+    "website": "https://ehlquran.com",
+    "linkedin": "https://www.linkedin.com/company/ehlquran/"
+  },
+  {
     "name": "AI GRID",
     "foundedYear": 2025,
     "categoryIds": [
@@ -74,6 +83,16 @@
     "linkedin": "https://www.linkedin.com/company/bdigitall"
   },
   {
+    "name": "BISTRO",
+    "foundedYear": 2025,
+    "categoryIds": [
+      "foodtech",
+      "saas"
+    ],
+    "website": "https://www.bistrodz.com",
+    "linkedin": "https://www.linkedin.com/company/bistro.pos"
+  },
+  {
     "name": "BK FIRE",
     "foundedYear": 2015,
     "categoryIds": [
@@ -114,6 +133,15 @@
     "linkedin": "https://linkedin.com/company/cocoding"
   },
   {
+    "name": "ClassaTeck",
+    "foundedYear": 2025,
+    "categoryIds": [
+      "edtech"
+    ],
+    "website": "https://classateck.com",
+    "linkedin": "https://www.linkedin.com/company/classateck"
+  },
+  {
     "name": "Coneduc",
     "foundedYear": 2024,
     "categoryIds": [
@@ -121,6 +149,23 @@
     ],
     "website": "https://www.coneduc.com",
     "linkedin": "https://www.linkedin.com/company/coneduc"
+  },
+  {
+    "name": "Costy",
+    "foundedYear": 2025,
+    "categoryIds": [
+      "saas",
+      "fintech"
+    ],
+    "website": "https://Costy.app"
+  },
+  {
+    "name": "The Doctor",
+    "foundedYear": 2018,
+    "categoryIds": [
+      "healthtech"
+    ],
+    "website": "https://the-doctor.app"
   },
   {
     "name": "DZDOC",
@@ -141,6 +186,14 @@
     "linkedin": "https://linkedin.com/company/emploitic"
   },
   {
+    "name": "Esaboura",
+    "foundedYear": 2023,
+    "categoryIds": [
+      "edtech"
+    ],
+    "website": "https://www.esaboura.com"
+  },
+  {
     "name": "Esiha",
     "foundedYear": 2019,
     "categoryIds": [
@@ -148,6 +201,16 @@
     ],
     "website": "https://www.esiha.net",
     "linkedin": "https://www.linkedin.com/company/esiha"
+  },
+  {
+    "name": "Esmmar app",
+    "foundedYear": 2021,
+    "categoryIds": [
+      "marketplace",
+      "retail"
+    ],
+    "website": "https://linktr.ee/esmmar.app?utm_source=linktree_profile_share&ltsid=b11f7a27-7515-45e6-b5d6-cbcb92fa87ca",
+    "linkedin": "https://www.linkedin.com/company/esmmar-%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D8%B1"
   },
   {
     "name": "eTabib",
@@ -219,6 +282,16 @@
     "linkedin": "https://www.linkedin.com/company/floppydelivery"
   },
   {
+    "name": "Foora",
+    "foundedYear": 2024,
+    "categoryIds": [
+      "legaltech",
+      "saas"
+    ],
+    "website": "https://foora.online",
+    "linkedin": "https://www.linkedin.com/company/foora-facturation"
+  },
+  {
     "name": "Fridoc",
     "foundedYear": 2021,
     "categoryIds": [
@@ -266,6 +339,15 @@
     "website": "https://www.h24voyages.com"
   },
   {
+    "name": "Happy S.S.T",
+    "foundedYear": 2025,
+    "categoryIds": [
+      "foodtech"
+    ],
+    "website": "https://Www.happysst.com.dz",
+    "linkedin": "https://www.linkedin.com/company/happy-solutions-services-technology"
+  },
+  {
     "name": "HexaFlex",
     "foundedYear": 2023,
     "categoryIds": [
@@ -273,6 +355,15 @@
     ],
     "website": "https://hexaflexdev.com",
     "linkedin": "https://linkedin.com/company/hexaflexdev"
+  },
+  {
+    "name": "Hi Talents",
+    "foundedYear": 2025,
+    "categoryIds": [
+      "marketplace"
+    ],
+    "website": "https://hitalents.io",
+    "linkedin": "https://www.linkedin.com/company/hi-talents"
   },
   {
     "name": "Hotelo",
@@ -301,6 +392,15 @@
     ],
     "website": "https://infinity-prod.com",
     "linkedin": "https://www.linkedin.com/company/dz-infinity-prod"
+  },
+  {
+    "name": "Intelgx",
+    "foundedYear": 2023,
+    "categoryIds": [
+      "ai"
+    ],
+    "website": "https://intelgx.com",
+    "linkedin": "https://www.linkedin.com/company/intelgx"
   },
   {
     "name": "KABAS",
@@ -358,6 +458,15 @@
     "linkedin": "https://linkedin.com/company/maystro-delivery"
   },
   {
+    "name": "Merch By Dz",
+    "foundedYear": 2023,
+    "categoryIds": [
+      "ecommerce"
+    ],
+    "website": "https://merchbydz.store",
+    "linkedin": "https://www.linkedin.com/company/merchbydz"
+  },
+  {
     "name": "Mostawdaa",
     "foundedYear": 2023,
     "categoryIds": [
@@ -403,6 +512,24 @@
     ],
     "website": "https://namlatic.com",
     "linkedin": "https://linkedin.com/company/namlatic"
+  },
+  {
+    "name": "Nexo Pizza",
+    "foundedYear": 2024,
+    "categoryIds": [
+      "foodtech"
+    ],
+    "website": "https://nexopizza.com",
+    "linkedin": "https://www.linkedin.com/company/nexopizza"
+  },
+  {
+    "name": "Octodet",
+    "foundedYear": 2019,
+    "categoryIds": [
+      "cybersecurity"
+    ],
+    "website": "https://octodet.com",
+    "linkedin": "https://www.linkedin.com/company/octodet/?viewAsMember=true"
   },
   {
     "name": "Okadoo",
@@ -455,7 +582,8 @@
     "name": "Qareeb",
     "foundedYear": 2023,
     "categoryIds": [
-      "saas", "ai"
+      "saas",
+      "ai"
     ],
     "website": "https://www.qareeb.io",
     "linkedin": "https://linkedin.com/company/qar-eeb"
@@ -479,6 +607,33 @@
     "linkedin": "https://www.linkedin.com/company/routimize"
   },
   {
+    "name": "Sagittario",
+    "foundedYear": 2025,
+    "categoryIds": [
+      "cloudtech"
+    ],
+    "website": "https://sagittario.app",
+    "linkedin": "https://www.linkedin.com/company/sagittario-cloud"
+  },
+  {
+    "name": "Sahl school",
+    "foundedYear": 2023,
+    "categoryIds": [
+      "edtech"
+    ],
+    "website": "https://sahl.school",
+    "linkedin": "https://dz.linkedin.com/company/sahlschool"
+  },
+  {
+    "name": "Sacoddo",
+    "foundedYear": 2025,
+    "categoryIds": [
+      "marketplace"
+    ],
+    "website": "https://sacoddo.com",
+    "linkedin": "https://www.linkedin.com/company/sacoddo"
+  },
+  {
     "name": "ScanEvent",
     "foundedYear": 2025,
     "categoryIds": [
@@ -486,6 +641,15 @@
     ],
     "website": "https://www.scanevent.net",
     "linkedin": "https://www.linkedin.com/company/scanevent"
+  },
+  {
+    "name": "Sellsabeel",
+    "foundedYear": 2020,
+    "categoryIds": [
+      "saas"
+    ],
+    "website": "https://sirajsoft.com/sellsabeel",
+    "linkedin": "https://www.linkedin.com/company/sirajsoft"
   },
   {
     "name": "SeltyGO",
@@ -558,6 +722,15 @@
     ],
     "website": "https://talabastore.dz",
     "linkedin": "https://linkedin.com/company/talabastore"
+  },
+  {
+    "name": "Talentech",
+    "foundedYear": 2019,
+    "categoryIds": [
+      "technology"
+    ],
+    "website": "https://www.talentech-algerie.com",
+    "linkedin": "https://www.linkedin.com/company/talentech-alg%C3%A9rie"
   },
   {
     "name": "Talenteo HR",
@@ -678,9 +851,19 @@
     "linkedin": "https://www.linkedin.com/company/wessini"
   },
   {
+    "name": "Whenrak",
+    "foundedYear": 2025,
+    "categoryIds": [
+      "mobility"
+    ],
+    "website": "https://www.whenrak.com",
+    "linkedin": "https://www.linkedin.com/company/whenrak"
+  },
+  {
     "name": "Yassir",
     "foundedYear": 2017,
     "categoryIds": [
+      "mobility",
       "logistics"
     ],
     "website": "https://yassir.com",
@@ -694,5 +877,13 @@
     ],
     "website": "https://yinvesti.com",
     "linkedin": "https://linkedin.com/company/yinvesti"
+  },
+  {
+    "name": "Zamili",
+    "foundedYear": 2025,
+    "categoryIds": [
+      "saas"
+    ],
+    "website": "https://www.zamili.ai"
   }
 ]
