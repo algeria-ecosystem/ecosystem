@@ -15,6 +15,7 @@ import Events from "@/features/events/pages/Index";
 import Resources from "@/features/resources/pages/Index";
 import About from "@/shared/pages/About";
 import NotFound from "@/shared/pages/NotFound";
+import { LanguageProvider } from "./i18n/LanguageContext";
 
 const queryClient = new QueryClient();
 
@@ -24,22 +25,24 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/incubators" element={<Incubators />} />
-            <Route path="/accelerators" element={<Accelerators />} />
-            <Route path="/coworking-spaces" element={<CoworkingSpaces />} />
-            <Route path="/media" element={<Media />} />
-            <Route path="/jobs" element={<Jobs />} />
-            <Route path="/communities" element={<Communities />} />
-            <Route path="/events" element={<Events />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/about" element={<About />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
+        <LanguageProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/incubators" element={<Incubators />} />
+              <Route path="/accelerators" element={<Accelerators />} />
+              <Route path="/coworking-spaces" element={<CoworkingSpaces />} />
+              <Route path="/media" element={<Media />} />
+              <Route path="/jobs" element={<Jobs />} />
+              <Route path="/communities" element={<Communities />} />
+              <Route path="/events" element={<Events />} />
+              <Route path="/resources" element={<Resources />} />
+              <Route path="/about" element={<About />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </LanguageProvider>
       </TooltipProvider>
     </QueryClientProvider>
   </ThemeProvider>

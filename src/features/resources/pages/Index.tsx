@@ -6,6 +6,7 @@ import Pagination from '@/shared/components/Pagination';
 import Footer from '@/shared/components/Footer';
 import resourcesData from '@/data/resources.json';
 import type { Resource } from '../types';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const resources: Resource[] = resourcesData;
 
@@ -14,6 +15,7 @@ const ITEMS_PER_PAGE = 9;
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const { t } = useLanguage()
 
   const filteredResources = useMemo(() => {
     let result = [...resources];
@@ -50,11 +52,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <main className="container py-4 sm:py-6 px-4 sm:px-6">
-        <Header 
-          title="Resources"
-          description="Discover helpful resources for the Algerian ecosystem. Find websites that provides informations about the ecosystem, statistics, and more."
+        <Header
+          title="resources"
+          description="resourcesDesc"
         />
-        
+
         <section className="space-y-4 sm:space-y-6">
           <FilterBar
             searchQuery={searchQuery}
@@ -62,7 +64,7 @@ const Index = () => {
             totalCount={resources.length}
             filteredCount={filteredResources.length}
           />
-          
+
           <ResourceGrid
             resources={paginatedResources}
             onClearFilters={handleClearFilters}
@@ -74,7 +76,7 @@ const Index = () => {
             onPageChange={setCurrentPage}
           />
         </section>
-        
+
         <Footer />
       </main>
     </div>

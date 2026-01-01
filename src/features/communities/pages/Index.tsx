@@ -7,6 +7,7 @@ import Footer from '@/shared/components/Footer';
 import communitiesData from '@/data/communities.json';
 import type { Community } from '../types';
 import type { SortOrder } from '@/shared/types';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const communities: Community[] = communitiesData;
 
@@ -16,6 +17,7 @@ const Index = () => {
   const [sortOrder, setSortOrder] = useState<SortOrder>('desc');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const { t } = useLanguage()
 
   const filteredAndSortedCommunities = useMemo(() => {
     let result = [...communities];
@@ -60,11 +62,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <main className="container py-4 sm:py-6 px-4 sm:px-6">
-        <Header 
-          title="Communities"
-          description="Discover communities, groups, and organizations in Algeria. Connect with developers, entrepreneurs, and tech enthusiasts."
+        <Header
+          title="communities"
+          description="communitiesDesc"
         />
-        
+
         <section className="space-y-4 sm:space-y-6">
           <SimpleFilterBar
             sortOrder={sortOrder}
@@ -75,7 +77,7 @@ const Index = () => {
             filteredCount={filteredAndSortedCommunities.length}
             searchPlaceholder="Search communities..."
           />
-          
+
           <CommunityGrid
             communities={paginatedCommunities}
             onClearFilters={handleClearFilters}
@@ -87,7 +89,7 @@ const Index = () => {
             onPageChange={setCurrentPage}
           />
         </section>
-        
+
         <Footer />
       </main>
     </div>

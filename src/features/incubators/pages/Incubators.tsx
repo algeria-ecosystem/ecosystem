@@ -7,6 +7,7 @@ import Footer from '@/shared/components/Footer';
 import incubatorsData from '@/data/incubators.json';
 import type { Incubator } from '../types';
 import type { SortOrder } from '@/shared/types';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const incubators: Incubator[] = incubatorsData;
 
@@ -17,6 +18,7 @@ const Incubators = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedCity, setSelectedCity] = useState<string>('all');
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const { t } = useLanguage()
 
   // Extract unique cities from incubators
   const availableCities = useMemo(() => {
@@ -81,11 +83,11 @@ const Incubators = () => {
   return (
     <div className="min-h-screen bg-background">
       <main className="container py-4 sm:py-6 px-4 sm:px-6">
-        <Header 
-          title="Incubators"
-          description="Discover incubators supporting and nurturing startups across Algeria."
+        <Header
+          title="incubators"
+          description="incubatorsDesc"
         />
-        
+
         <section className="space-y-4 sm:space-y-6">
           <SimpleFilterBar
             sortOrder={sortOrder}
@@ -99,7 +101,7 @@ const Incubators = () => {
             selectedCity={selectedCity}
             onCityChange={handleCityChange}
           />
-          
+
           <IncubatorGrid
             incubators={paginatedIncubators}
             onClearFilters={handleClearFilters}
@@ -111,7 +113,7 @@ const Incubators = () => {
             onPageChange={setCurrentPage}
           />
         </section>
-        
+
         <Footer />
       </main>
     </div>
