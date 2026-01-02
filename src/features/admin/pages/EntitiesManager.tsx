@@ -36,6 +36,7 @@ interface EntityFormData {
   founded_year: string;
   map_location: string;
   image_url: string;
+  status: 'pending' | 'approved' | 'rejected';
 }
 
 const EntitiesManager = () => {
@@ -53,7 +54,8 @@ const EntitiesManager = () => {
     linkedin: '',
     founded_year: '',
     map_location: '',
-    image_url: ''
+    image_url: '',
+    status: 'approved'
   });
 
   // --- Data Fetching ---
@@ -106,7 +108,8 @@ const EntitiesManager = () => {
         ...data,
         founded_year: data.founded_year ? parseInt(data.founded_year) : null,
         wilaya_id: data.wilaya_id === 'null' || !data.wilaya_id ? null : data.wilaya_id,
-        status: 'approved' // Auto-approve if editing/saving as admin
+        // Use provided status or default to 'approved' if creating new admin entry
+        status: data.status || 'approved'
       };
 
       const { error } = await supabase.from('entities').upsert(payload);
@@ -150,7 +153,8 @@ const EntitiesManager = () => {
     setEditingItem(null);
     setFormData({
       name: '', slug: '', type_id: entityTypes?.[0]?.id || '', wilaya_id: 'null',
-      description: '', website: '', linkedin: '', founded_year: '', map_location: '', image_url: ''
+      description: '', website: '', linkedin: '', founded_year: '', map_location: '', image_url: '',
+      status: 'approved'
     });
     setIsSheetOpen(true);
   };
@@ -167,7 +171,8 @@ const EntitiesManager = () => {
       linkedin: item.linkedin || '',
       founded_year: item.founded_year ? String(item.founded_year) : '',
       map_location: item.map_location || '',
-      image_url: item.image_url || ''
+      image_url: item.image_url || '',
+      status: item.status || 'approved'
     });
     setIsSheetOpen(true);
   };
@@ -246,21 +251,13 @@ const EntitiesManager = () => {
           { key: 'type', header: 'Type', render: (item: any) => <span className="text-sm font-medium">{item.type?.name}</span> },
           { key: 'wilaya', header: 'Wilaya', render: (item: any) => <span className="text-sm">{item.wilaya?.name || '-'}</span> },
           {
-            key: 'actions', header: 'Actions', render: (item: Entity) => (
-              <div className="flex items-center gap-2">
-                {item.status === 'pending' && (
-                  <Button size="sm" variant="outline" className="h-8 text-green-600 hover:text-green-700 hover:bg-green-50" onClick={() => handleApprove(item)}>
-                    Approve
-                  </Button>
-                )}
-                <Button variant="ghost" size="icon" onClick={() => handleEdit(item)}>
-                  <div className="w-4 h-4 i-lucide-pencil text-blue-500" /> {/* Simulate icon since we can't easily import Pencil here without changing imports or assuming DataTable passes it. Actually DataTable logic is overridden here. */}
-                  <span className="sr-only">Edit</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-pencil"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" /><path d="m15 5 4 4" /></svg>
-                </Button>
-              </div>
-            ) as any
-          }
+            key: 'moderation', header: 'Review', render: (item: Entity) => item.status === 'pending' ? (
+              <Button size="sm" variant="outline" className="h-8 text-green-600 hover:text-green-700 hover:bg-green-50 border-green-200 dark:border-green-800" onClick={() => handleApprove(item)}>
+                Approve
+              </Button>
+            ) : null
+          },
+          { key: 'actions', header: 'Actions' }
         ]}
         onAdd={handleAdd}
         onEdit={handleEdit}
@@ -274,6 +271,21 @@ const EntitiesManager = () => {
           </SheetHeader>
 
           <div className="space-y-6 py-6">
+            {/* Status for Admin Control */}
+            <div className="bg-muted/50 p-4 rounded-lg border">
+              <Label className="mb-2 block">Moderation Status</Label>
+              <Select value={formData.status} onValueChange={(val: any) => setFormData(prev => ({ ...prev, status: val }))}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select status" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="approved">Approved</SelectItem>
+                  <SelectItem value="pending">Pending</SelectItem>
+                  <SelectItem value="rejected">Rejected</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
             {/* Basic Info */}
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
