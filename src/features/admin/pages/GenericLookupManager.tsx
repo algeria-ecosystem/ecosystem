@@ -34,43 +34,47 @@ const GenericLookupManager = ({ tableName, title, fields = [] }: GenericLookupMa
   const [editingItem, setEditingItem] = useState<GenericItem | null>(null);
   const [formData, setFormData] = useState<any>({ name: '', slug: '' });
 
-  // Fetch
+  // Fetch data
   const { data: items, isLoading } = useQuery({
-    queryKey: [`admin_${tableName}`],
+    queryKey: ['admin_lookup', tableName],
     queryFn: async () => {
-      // For tables with different ID types or structures, we might need adjustments
-      // Assuming categories, media_types, wilayas all have UUID id, name, slug.
-      const query = supabase.from(tableName).select('*').order('name');
-      const { data, error } = await query;
+      const { data, error } = await supabase.functions.invoke('api', {
+        body: { task: 'admin-list-table', table: tableName }
+      });
       if (error) throw error;
-      return data as GenericItem[];
+      return data as any[];
     }
   });
 
   // Mutations
   const upsertMutation = useMutation({
     mutationFn: async (data: any) => {
-      const { error } = await supabase.from(tableName as any).upsert(data);
+      const { error } = await supabase.functions.invoke('api', {
+        body: { task: 'admin-upsert-table', table: tableName, data }
+      });
       if (error) throw error;
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: [`admin_${tableName}`] });
-      toast.success("Item saved successfully");
-      handleCloseDialog();
+      queryClient.invalidateQueries({ queryKey: ['admin_lookup', tableName] });
+      toast.success("Saved successfully");
+      setIsDialogOpen(false);
+      setEditingItem(null);
     },
-    onError: (error) => toast.error(`Error: ${error.message}`)
+    onError: (error) => toast.error(error.message)
   });
 
   const deleteMutation = useMutation({
     mutationFn: async (id: string) => {
-      const { error } = await supabase.from(tableName as any).delete().eq('id', id);
+      const { error } = await supabase.functions.invoke('api', {
+        body: { task: 'admin-delete-table', table: tableName, id }
+      });
       if (error) throw error;
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: [`admin_${tableName}`] });
-      toast.success("Item deleted");
+      queryClient.invalidateQueries({ queryKey: ['admin_lookup', tableName] });
+      toast.success("Deleted successfully");
     },
-    onError: (error) => toast.error(`Error: ${error.message}`)
+    onError: (error) => toast.error(error.message)
   });
 
   // Handlers

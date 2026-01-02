@@ -30,3 +30,8 @@
 `npx supabase gen types typescript --local > src/types/supabase.ts`
 - OR usage with linked remote:
 - npx supabase gen types typescript --linked > src/types/supabase.ts
+
+
+# Deploy the supabase edge functions
+
+`npx supabase functions deploy api`

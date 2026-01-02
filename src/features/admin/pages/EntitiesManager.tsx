@@ -83,10 +83,14 @@ const EntitiesManager = () => {
   ) || [];
 
   // Metadata for dropdowns
+  // Metadata for dropdowns
   const { data: wilayas } = useQuery({
     queryKey: ['wilayas_lookup'],
     queryFn: async () => {
-      const { data } = await supabase.from('wilayas').select('id, name, code').order('code');
+      const { data, error } = await supabase.functions.invoke('api', {
+        body: { task: 'admin-list-table', table: 'wilayas' }
+      });
+      if (error) throw error;
       return data as Wilaya[];
     }
   });
@@ -94,7 +98,10 @@ const EntitiesManager = () => {
   const { data: entityTypes } = useQuery({
     queryKey: ['entity_types_lookup'],
     queryFn: async () => {
-      const { data } = await supabase.from('entity_types').select('id, name');
+      const { data, error } = await supabase.functions.invoke('api', {
+        body: { task: 'admin-list-table', table: 'entity_types' }
+      });
+      if (error) throw error;
       return data as EntityType[];
     }
   });
@@ -112,7 +119,9 @@ const EntitiesManager = () => {
         status: data.status || 'approved'
       };
 
-      const { error } = await supabase.from('entities').upsert(payload);
+      const { error } = await supabase.functions.invoke('api', {
+        body: { task: 'admin-upsert-entity', ...payload }
+      });
       if (error) throw error;
     },
     onSuccess: () => {
@@ -125,7 +134,9 @@ const EntitiesManager = () => {
 
   const approveMutation = useMutation({
     mutationFn: async (id: string) => {
-      const { error } = await supabase.from('entities').update({ status: 'approved' }).eq('id', id);
+      const { error } = await supabase.functions.invoke('api', {
+        body: { task: 'admin-approve-entity', id }
+      });
       if (error) throw error;
     },
     onSuccess: () => {
@@ -137,7 +148,9 @@ const EntitiesManager = () => {
 
   const deleteMutation = useMutation({
     mutationFn: async (id: string) => {
-      const { error } = await supabase.from('entities').delete().eq('id', id);
+      const { error } = await supabase.functions.invoke('api', {
+        body: { task: 'admin-delete-entity', id }
+      });
       if (error) throw error;
     },
     onSuccess: () => {
@@ -241,8 +254,8 @@ const EntitiesManager = () => {
           {
             key: 'status', header: 'Status', render: (item: any) => (
               <span className={`px-2 py-1 rounded text-xs font-medium ${item.status === 'approved' ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' :
-                  item.status === 'pending' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400' :
-                    'bg-red-100 text-red-800'
+                item.status === 'pending' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400' :
+                  'bg-red-100 text-red-800'
                 }`}>
                 {item.status || 'approved'}
               </span>

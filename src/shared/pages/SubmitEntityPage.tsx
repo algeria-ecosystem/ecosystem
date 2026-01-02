@@ -39,23 +39,31 @@ const formSchema = z.object({
   founded_year: z.string().regex(/^\d{4}$/, "Must be a 4-digit year").optional().or(z.literal('')),
 });
 
+type EntityType = { id: string; name: string; };
+type Wilaya = { id: string; name: string; code: string; };
+
 const SubmitEntityPage = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // Fetch Metadata
   const { data: entityTypes } = useQuery({
-    queryKey: ['entity_types_lookup'],
+    queryKey: ['entity_types'],
     queryFn: async () => {
-      const { data } = await supabase.from('entity_types').select('id, name');
-      return data || [];
+      const { data, error } = await supabase.functions.invoke('api?task=get-lookups&table=entity_types', {
+        method: 'GET'
+      });
+      if (error) throw error;
+      return data as EntityType[];
     }
   });
 
   const { data: wilayas } = useQuery({
-    queryKey: ['wilayas_lookup'],
+    queryKey: ['wilayas'],
     queryFn: async () => {
-      const { data } = await supabase.from('wilayas').select('id, name, code').order('code');
-      return data || [];
+      const { data, error } = await supabase.functions.invoke('api?task=get-lookups&table=wilayas', {
+        method: 'GET'
+      });
+      if (error) throw error;
+      return data as Wilaya[];
     }
   });
 
@@ -88,7 +96,9 @@ const SubmitEntityPage = () => {
         status: 'pending'
       };
 
-      const { error } = await supabase.from('entities').insert(payload);
+      const { error } = await supabase.functions.invoke('api', {
+        body: { task: 'submit-entity', ...payload }
+      });
       if (error) throw error;
     },
     onSuccess: () => {

@@ -94,9 +94,9 @@ const EntityCard = ({ entity }: EntityCardProps) => {
       </div>
 
       <div className="mt-auto pt-4 border-t border-border/40 flex flex-col gap-2">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between flex-wrap gap-y-2">
           <div className="flex items-center gap-4">
-            {entity.founded_year && (
+            {entity.founded_year != null && (
               <div className="flex items-center gap-1.5 text-xs text-muted-foreground" title="Founded Year">
                 <Calendar className="w-3.5 h-3.5" />
                 <span>{entity.founded_year}</span>
@@ -111,7 +111,7 @@ const EntityCard = ({ entity }: EntityCardProps) => {
           </div>
 
           <div className="flex items-center gap-2">
-            {entity.map_location && (
+            {entity.map_location && entity.map_location.trim().length > 0 && (
               <a
                 href={entity.map_location}
                 target="_blank"

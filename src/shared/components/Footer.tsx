@@ -1,4 +1,5 @@
 import { Heart, Github, Plus } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -17,15 +18,14 @@ const Footer = () => {
             <Github className="w-4 h-4" />
             <span>Contribute on GitHub</span>
           </a>
-          <a
-            href="https://forms.gle/AiACXXFWwA1inGPJA"
-            target="_blank"
+          <Link
+            to={'/submit'}
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors"
           >
             <Plus className="w-4 h-4" />
             <span>Submit Data</span>
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

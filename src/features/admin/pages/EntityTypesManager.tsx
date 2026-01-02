@@ -27,11 +27,13 @@ const EntityTypesManager = () => {
   const [editingItem, setEditingItem] = useState<EntityType | null>(null);
   const [formData, setFormData] = useState({ name: '', slug: '' });
 
-  // Fetch
+  // Data Fetching
   const { data: entityTypes, isLoading } = useQuery({
     queryKey: ['admin_entity_types'],
     queryFn: async () => {
-      const { data, error } = await supabase.from('entity_types').select('*').order('name');
+      const { data, error } = await supabase.functions.invoke('api', {
+        body: { task: 'admin-list-table', table: 'entity_types' }
+      });
       if (error) throw error;
       return data as EntityType[];
     }
@@ -39,28 +41,33 @@ const EntityTypesManager = () => {
 
   // Mutations
   const upsertMutation = useMutation({
-    mutationFn: async (data: { id?: string, name: string, slug: string }) => {
-      const { error } = await supabase.from('entity_types').upsert(data);
+    mutationFn: async (data: any) => {
+      const { error } = await supabase.functions.invoke('api', {
+        body: { task: 'admin-upsert-table', table: 'entity_types', data }
+      });
       if (error) throw error;
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin_entity_types'] });
-      toast.success("Entity type saved successfully");
-      handleCloseDialog();
+      toast.success("Saved successfully");
+      setIsDialogOpen(false);
+      setEditingItem(null);
     },
-    onError: (error) => toast.error(`Error: ${error.message}`)
+    onError: (error) => toast.error(error.message)
   });
 
   const deleteMutation = useMutation({
     mutationFn: async (id: string) => {
-      const { error } = await supabase.from('entity_types').delete().eq('id', id);
+      const { error } = await supabase.functions.invoke('api', {
+        body: { task: 'admin-delete-table', table: 'entity_types', id }
+      });
       if (error) throw error;
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin_entity_types'] });
-      toast.success("Entity type deleted");
+      toast.success("Deleted successfully");
     },
-    onError: (error) => toast.error(`Error: ${error.message}`)
+    onError: (error) => toast.error(error.message)
   });
 
   // Handlers

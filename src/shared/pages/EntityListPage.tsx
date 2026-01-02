@@ -8,7 +8,8 @@ import EntityCard from '@/shared/components/EntityCard';
 import Pagination from '@/shared/components/Pagination';
 import EmptyState from '@/shared/components/EmptyState';
 import { Loader2, Plus } from 'lucide-react';
-import type { Entity } from '@/shared/types/entity';
+import type { Category, Entity, MediaType, Wilaya } from '@/shared/types/entity';
+import { Link } from 'react-router-dom';
 
 type FilterType = 'category' | 'wilaya' | 'media_type' | 'none';
 type SortOrder = 'asc' | 'desc';
@@ -54,43 +55,65 @@ const EntityListPage = ({
     queryKey: ['entities', entityTypeSlug, entityType?.id],
     enabled: !!entityType?.id,
     queryFn: async () => {
-      const query = supabase
-        .from('entities')
-        .select(`
-          *,
-          wilaya:wilayas(*),
-          entity_categories(category:categories(*)),
-          entity_media_types(media_type:media_types(*))
-        `)
-        .eq('type_id', entityType?.id)
-        .eq('status', 'approved');
+      const { data, error } = await supabase.functions.invoke('api', {
+        body: {
+          task: 'get-entities',
+          entityTypeSlug,
+          status: 'approved'
+        }
+      });
 
-      const { data, error } = await query;
       if (error) throw error;
       return data as Entity[];
     }
   });
 
   // 3. Fetch Filter Options (Categories, Wilayas, etc.)
-  const { data: filterOptions } = useQuery({
-    queryKey: ['filters', filterType],
-    enabled: filterType !== 'none',
+  const { data: categories } = useQuery<Category[]>({
+    queryKey: ['categories'],
     queryFn: async () => {
-      if (filterType === 'category') {
-        const { data } = await supabase.from('categories').select('*').order('name');
-        return data?.map(c => ({ value: c.id, label: c.name })) || [];
-      }
-      if (filterType === 'wilaya') {
-        const { data } = await supabase.from('wilayas').select('*').order('name');
-        return data?.map(w => ({ value: w.id, label: w.name })) || [];
-      }
-      if (filterType === 'media_type') {
-        const { data } = await supabase.from('media_types').select('*').order('name');
-        return data?.map(m => ({ value: m.id, label: m.name })) || [];
-      }
-      return [];
+      const { data, error } = await supabase.functions.invoke('api?task=get-lookups&table=categories', {
+        method: 'GET'
+      });
+      if (error) throw error;
+      return data as Category[];
     }
   });
+
+  const { data: wilayas } = useQuery<Wilaya[]>({
+    queryKey: ['wilayas'],
+    queryFn: async () => {
+      const { data, error } = await supabase.functions.invoke('api?task=get-lookups&table=wilayas', {
+        method: 'GET'
+      });
+      if (error) throw error;
+      return data as Wilaya[];
+    }
+  });
+
+  const { data: mediaTypes } = useQuery<MediaType[]>({
+    queryKey: ['media_types'],
+    queryFn: async () => {
+      const { data, error } = await supabase.functions.invoke('api?task=get-lookups&table=media_types', {
+        method: 'GET'
+      });
+      if (error) throw error;
+      return data as MediaType[];
+    }
+  });
+
+  const filterOptions = useMemo(() => {
+    if (filterType === 'category' && categories) {
+      return categories.map(c => ({ value: c.id, label: c.name }));
+    }
+    if (filterType === 'wilaya' && wilayas) {
+      return wilayas.map(w => ({ value: w.id, label: w.name }));
+    }
+    if (filterType === 'media_type' && mediaTypes) {
+      return mediaTypes.map(m => ({ value: m.id, label: m.name }));
+    }
+    return [];
+  }, [filterType, categories, wilayas, mediaTypes]);
 
   // Client-side Filtering & Sorting
   const filteredEntities = useMemo(() => {
@@ -152,15 +175,14 @@ const EntityListPage = ({
           {/* Contribution CTA */}
           {location.pathname !== '/about' && (
             <div className="mt-4 sm:mt-5 px-4 flex justify-center">
-              <a
-                href="https://forms.gle/AiACXXFWwA1inGPJA"
-                target="_blank"
+              <Link
+                to={'/submit'}
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm text-primary hover:bg-primary/10 font-medium transition-colors"
               >
                 <Plus className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 <span>Submit Data</span>
-              </a>
+              </Link>
             </div>
           )}
 
