@@ -1,0 +1,292 @@
+[
+  {
+    "code": 1,
+    "name": "Adrar",
+    "slug": "adrar"
+  },
+  {
+    "code": 2,
+    "name": "Chlef",
+    "slug": "chlef"
+  },
+  {
+    "code": 3,
+    "name": "Laghouat",
+    "slug": "laghouat"
+  },
+  {
+    "code": 4,
+    "name": "Oum El Bouaghi",
+    "slug": "oum-el-bouaghi"
+  },
+  {
+    "code": 5,
+    "name": "Batna",
+    "slug": "batna"
+  },
+  {
+    "code": 6,
+    "name": "Béjaïa",
+    "slug": "bejaia"
+  },
+  {
+    "code": 7,
+    "name": "Biskra",
+    "slug": "biskra"
+  },
+  {
+    "code": 8,
+    "name": "Béchar",
+    "slug": "bechar"
+  },
+  {
+    "code": 9,
+    "name": "Blida",
+    "slug": "blida"
+  },
+  {
+    "code": 10,
+    "name": "Bouira",
+    "slug": "bouira"
+  },
+  {
+    "code": 11,
+    "name": "Tamanrasset",
+    "slug": "tamanrasset"
+  },
+  {
+    "code": 12,
+    "name": "Tébessa",
+    "slug": "tebessa"
+  },
+  {
+    "code": 13,
+    "name": "Tlemcen",
+    "slug": "tlemcen"
+  },
+  {
+    "code": 14,
+    "name": "Tiaret",
+    "slug": "tiaret"
+  },
+  {
+    "code": 15,
+    "name": "Tizi Ouzou",
+    "slug": "tizi-ouzou"
+  },
+  {
+    "code": 16,
+    "name": "Algiers",
+    "slug": "algiers"
+  },
+  {
+    "code": 17,
+    "name": "Djelfa",
+    "slug": "djelfa"
+  },
+  {
+    "code": 18,
+    "name": "Jijel",
+    "slug": "jijel"
+  },
+  {
+    "code": 19,
+    "name": "Sétif",
+    "slug": "setif"
+  },
+  {
+    "code": 20,
+    "name": "Saïda",
+    "slug": "saida"
+  },
+  {
+    "code": 21,
+    "name": "Skikda",
+    "slug": "skikda"
+  },
+  {
+    "code": 22,
+    "name": "Sidi Bel Abbès",
+    "slug": "sidi-bel-abbes"
+  },
+  {
+    "code": 23,
+    "name": "Annaba",
+    "slug": "annaba"
+  },
+  {
+    "code": 24,
+    "name": "Guelma",
+    "slug": "guelma"
+  },
+  {
+    "code": 25,
+    "name": "Constantine",
+    "slug": "constantine"
+  },
+  {
+    "code": 26,
+    "name": "Médéa",
+    "slug": "medea"
+  },
+  {
+    "code": 27,
+    "name": "Mostaganem",
+    "slug": "mostaganem"
+  },
+  {
+    "code": 28,
+    "name": "M'Sila",
+    "slug": "msila"
+  },
+  {
+    "code": 29,
+    "name": "Mascara",
+    "slug": "mascara"
+  },
+  {
+    "code": 30,
+    "name": "Ouargla",
+    "slug": "ouargla"
+  },
+  {
+    "code": 31,
+    "name": "Oran",
+    "slug": "oran"
+  },
+  {
+    "code": 32,
+    "name": "El Bayadh",
+    "slug": "el-bayadh"
+  },
+  {
+    "code": 33,
+    "name": "Illizi",
+    "slug": "illizi"
+  },
+  {
+    "code": 34,
+    "name": "Bordj Bou Arréridj",
+    "slug": "bordj-bou-arreridj"
+  },
+  {
+    "code": 35,
+    "name": "Boumerdès",
+    "slug": "boumerdes"
+  },
+  {
+    "code": 36,
+    "name": "El Tarf",
+    "slug": "el-tarf"
+  },
+  {
+    "code": 37,
+    "name": "Tindouf",
+    "slug": "tindouf"
+  },
+  {
+    "code": 38,
+    "name": "Tissemsilt",
+    "slug": "tissemsilt"
+  },
+  {
+    "code": 39,
+    "name": "El Oued",
+    "slug": "el-oued"
+  },
+  {
+    "code": 40,
+    "name": "Khenchela",
+    "slug": "khenchela"
+  },
+  {
+    "code": 41,
+    "name": "Souk Ahras",
+    "slug": "souk-ahras"
+  },
+  {
+    "code": 42,
+    "name": "Tipaza",
+    "slug": "tipaza"
+  },
+  {
+    "code": 43,
+    "name": "Mila",
+    "slug": "mila"
+  },
+  {
+    "code": 44,
+    "name": "Aïn Defla",
+    "slug": "ain-defla"
+  },
+  {
+    "code": 45,
+    "name": "Naâma",
+    "slug": "naama"
+  },
+  {
+    "code": 46,
+    "name": "Aïn Témouchent",
+    "slug": "ain-temouchent"
+  },
+  {
+    "code": 47,
+    "name": "Ghardaïa",
+    "slug": "ghardaia"
+  },
+  {
+    "code": 48,
+    "name": "Relizane",
+    "slug": "relizane"
+  },
+  {
+    "code": 49,
+    "name": "Timimoun",
+    "slug": "timimoun"
+  },
+  {
+    "code": 50,
+    "name": "Bordj Badji Mokhtar",
+    "slug": "bordj-badji-mokhtar"
+  },
+  {
+    "code": 51,
+    "name": "Ouled Djellal",
+    "slug": "ouled-djellal"
+  },
+  {
+    "code": 52,
+    "name": "Béni Abbès",
+    "slug": "beni-abbes"
+  },
+  {
+    "code": 53,
+    "name": "In Salah",
+    "slug": "in-salah"
+  },
+  {
+    "code": 54,
+    "name": "In Guezzam",
+    "slug": "in-guezzam"
+  },
+  {
+    "code": 55,
+    "name": "Touggourt",
+    "slug": "touggourt"
+  },
+  {
+    "code": 56,
+    "name": "Djanet",
+    "slug": "djanet"
+  },
+  {
+    "code": 57,
+    "name": "El M'Ghair",
+    "slug": "el-mghair"
+  },
+  {
+    "code": 58,
+    "name": "El Meniaa",
+    "slug": "el-meniaa"
+  }
+]

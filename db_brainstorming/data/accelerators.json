@@ -1,47 +1,32 @@
 [
   {
     "name": "Algeria Startup Challenge",
-    "foundedYear": 2018,
     "description": "Algeria's startup competition and accelerator. Fast-track mentorship, innovation challenges, and access to funding and industry partners",
     "website": "https://algeriastartupchallenge.com",
-    "linkedin": "https://www.linkedin.com/company/algeria-startup-challenge",
-    "city": "Algiers",
-    "mapLocation": "https://maps.app.goo.gl/BMVDLeUomqobuGGH9"
+    "linkedin": "https://www.linkedin.com/company/algeria-startup-challenge"
   },
   {
     "name": "Algeria Startup Fund",
-    "foundedYear": 2020,
     "description": "Government’s main startup fund",
     "website": "https://asf.dz",
-    "linkedin": "https://www.linkedin.com/company/algerian-startup-fund",
-    "city": "Algiers",
-    "mapLocation": "https://maps.app.goo.gl/xUaz6xDCWpQcKGDJ9"
+    "linkedin": "https://www.linkedin.com/company/algerian-startup-fund"
   },
   {
     "name": "Algeria Venture",
-    "foundedYear": 2020,
     "description": "Algeria Venture or A-Venture is a state-owned, founded in late 2020 and calls the shots when it comes to supporting startups in AI, cybersecurity and robotics.",
     "website": "https://www.aventure.dz",
-    "linkedin": "https://www.linkedin.com/company/algeriaventure",
-    "city": "Algiers",
-    "mapLocation": "https://maps.app.goo.gl/BwWH8FXGonAxmXK88"
+    "linkedin": "https://www.linkedin.com/company/algeriaventure"
   },
   {
     "name": "Founder Institute Algeria",
-    "foundedYear": 2025,
     "description": "Founder Institute Algeria plugs local founders straight into a global network—over 200 cities strong and rooted in Silicon Valley.",
     "website": "https://fi.co/apply/algiers",
-    "linkedin": "https://www.linkedin.com/company/the-founder-institute",
-    "city": "Algiers",
-    "mapLocation": "https://maps.app.goo.gl/BwWH8FXGonAxmXK88"
+    "linkedin": "https://www.linkedin.com/company/the-founder-institute"
   },
   {
     "name": "UNDP Accelerator Lab",
-    "foundedYear": 2019,
     "description": "The UNDP Accelerator Lab forms part of a global strategy to spot and nurture change makers working in social entrepreneurship and the circular economy,",
     "website": "https://www.undp.org/acceleratorlabs/undp-algeria-accelerator-lab",
-    "linkedin": "https://www.linkedin.com/company/undp-accelerator-labs",
-    "city": "United States"
+    "linkedin": "https://www.linkedin.com/company/undp-accelerator-labs"
   }
 ]
-

@@ -1,0 +1,87 @@
+[
+  {
+    "name": "رحلة مبرمج",
+    "media_type": "podcast",
+    "description": "A podcast that shares personal experiences, ideas about programming, and everything related to the world of technology."
+  },
+  {
+    "name": "Wled Horma Talks",
+    "media_type": "podcast",
+    "description": "Wled Horma Talks, where we explore the intersections of life, education, technology, and business in the Algerian context."
+  },
+  {
+    "name": "بودكاست رائد",
+    "media_type": "podcast",
+    "description": "An Algerian podcast presented by Dr. Abdelrahim Abdellawi. Host and share the experiences of the elite with you."
+  },
+  {
+    "name": "BrainerX Cast",
+    "media_type": "podcast",
+    "description": "Host successful people in order to share their experience in business , entrepreneurship and personal development."
+  },
+  {
+    "name": "Fluently Talk",
+    "media_type": "podcast",
+    "description": "Inspiring stories from entrepreneurs, creators, and professionals who have made their mark in their fields."
+  },
+  {
+    "name": "بودكاست المقاول",
+    "media_type": "podcast",
+    "description": "Provides practical advice to help young Algerians create and manage successful businesses. On this channel, you will find educational videos on topics such as innovation, strategic planning, financing, and risk management."
+  },
+  {
+    "name": "بطاقة المقاول الذاتي",
+    "media_type": "video",
+    "description": "جواب لكل سؤال عن بطاقة المقاول الذاتي الجزئري مع الوزير يسين وليد."
+  },
+  {
+    "name": "Gosto Podcast",
+    "media_type": "podcast",
+    "description": "Gosto podcast that spread the entrepreneurship mindset."
+  },
+  {
+    "name": "Podcast Oxygen",
+    "media_type": "podcast",
+    "description": "Share successful stories of entrepreneurs."
+  },
+  {
+    "name": "King's Podcast",
+    "media_type": "podcast",
+    "description": "King's Podcast unlocks the secrets to know more about business with the power of video. Join us to guide you through crafting compelling content that will reign supreme!."
+  },
+  {
+    "name": "حكاية بزنس",
+    "media_type": "podcast",
+    "description": "بودكاست جزائري يختص في كل ما يخص التجارة و ريادة الأعمال."
+  },
+  {
+    "name": "Gusra Podcast",
+    "media_type": "podcast",
+    "description": "Gusra Podcast, is an Arab speaking Algerian podcast. A long format discussion where a variety of guests, from different walks of life, come to talk about their stories, experiences , fields of expertise and other miscellaneous topics."
+  },
+  {
+    "name": "Podcast Tamayaz",
+    "media_type": "podcast",
+    "description": "بودكاست تَميَّز يستضيف شخصيات ناجحة أكاديميا لننقل تجاربهم، ويتناول بعضا من شخصيتهم ويبرزها أكثر ليتعرف عليهم الجمهور عن قرب أكثر ويكونوا مصدر إلهام لهم."
+  },
+  {
+    "name": "بودكاست حارث",
+    "media_type": "podcast",
+    "description": "بودكاست جزائري يشارك تجارب لشخصيات ناجحة."
+  },
+  {
+    "name": "1001 Tech",
+    "media_type": "newsletter",
+    "description": "A famous Algerian media source for technology news, reviews, and digital culture."
+  },
+  {
+    "name": "The Algerian developer",
+    "media_type": "newsletter",
+    "description": "مشروع يهتم بالتقنية وتبسيطها من خلال منشورات، فيديوهات ونشاطات وتظاهرات تقنية في الميدان."
+  },
+  {
+    "name": "حديث",
+    "media_type": "podcast",
+    "description": "منصة شمال إفريقيا للمعرفة. مواضيع حول العلم، الإقتصاد، ريادة الأعمال والإبداع"
+  }
+]
