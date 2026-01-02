@@ -1,9 +1,14 @@
 export interface Incubator {
   name: string;
-  foundedYear: number;
-  website?: string;
-  linkedin?: string;
+  incubator_type?: string;
+  address?: string;
   city?: string;
+  email?: string;
+  phone?: string;
+  website?: string;
+  socials?: string[];
+  description?: string;
   mapLocation?: string;
+  foundedYear?: number;
 }
 

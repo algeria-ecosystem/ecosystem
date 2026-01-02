@@ -1,78 +1,934 @@
 [
   {
-    "name": "Business Valley",
-    "foundedYear": 2021,
-    "website": "https://linktr.ee/Business.valley",
-    "linkedin": "https://www.linkedin.com/company/business-valley",
+    "name": "VALKYRIE-FIDUCIAIRE",
+    "incubator_type": "private",
+    "city": "Oran",
+    "address": "25, rue BOUKADA Abdelkdaer Hai Essedikia 31020 Oran",
+    "email": "khaled-berkani@valkyrie-fiduciaire.dz",
+    "phone": "0612667"
+  },
+  {
+    "name": "UTINC4.2",
+    "incubator_type": "university",
+    "city": "Tipaza",
+    "address": "Cite 50 lgts B6 N°2 Oued Merzoug Tipaza",
+    "email": "amerouane.lmd@cu-tipaza.dz",
+    "phone": "0666810772"
+  },
+  {
+    "name": "ALSTRATO",
+    "incubator_type": "private",
+    "city": "Boumerdes",
+    "address": "CITÉ SAIDANI DJILALI Numero 30 Ouled Haddadj",
+    "email": "smail.benhabiles@alstrato.com",
+    "phone": "0770941118"
+  },
+  {
+    "name": "ENSM INCUBATOR",
+    "incubator_type": "university",
+    "city": "Tipaza",
+    "address": "National Higher School of Management, University Pole of Kolea",
+    "email": "m.belali@ensmanagement.edu.dz",
+    "phone": "0560654939"
+  },
+  {
+    "name": "GREEN INCUBATOR",
+    "incubator_type": "private",
+    "city": "Oran",
+    "address": "20, rue la Gaiete Ain El Turck",
+    "email": "contact@green-incubator.net",
+    "phone": "0549503363"
+  },
+  {
+    "name": "Ghardaia University Incubator",
+    "incubator_type": "university",
+    "city": "Ghardaïa",
+    "address": "rue de thenia",
+    "email": "faridtouait@gmail.com",
+    "phone": "0667908590"
+  },
+  {
+    "name": "IN-HUB",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "address": "LOTISSEMENT ZERGOUG VILLA 15 said hamdine",
+    "email": "khadidja.guerrab@in-hub.co",
+    "phone": "0550964002"
+  },
+  {
+    "name": "STARTDZ",
+    "incubator_type": "university",
+    "city": "Sidi Bel Abbes",
+    "address": "Cite 112 Logements, Bloc 4 N 85 Sidi Yacine Sidi Bel Abbes",
+    "email": "djelloulzidane@yahoo.fr",
+    "phone": "0665638041"
+  },
+  {
+    "name": "INRENOVA",
+    "incubator_type": "university",
+    "city": "Algiers",
+    "address": "El-achour",
+    "email": "directrice.inre@gmail.com",
+    "phone": "0772872648"
+  },
+  {
+    "name": "Oum El Bouaghi University Incubator",
+    "incubator_type": "university",
+    "city": "Oum El Bouaghi",
+    "address": "CITE VML OUM EL BOUAGHI",
+    "email": "mazouz.toufik@univ-oeb.dz",
+    "phone": "0661377614"
+  },
+  {
+    "name": "AIN TEMOUCHENT INCUBATOR",
+    "incubator_type": "university",
+    "city": "Aïn Temouchent",
+    "email": "incubateur.uatbb@univ-temouchent.edu.dz",
+    "phone": "0558018192"
+  },
+  {
+    "name": "ESAA INCUBATOR",
+    "incubator_type": "university",
+    "city": "Algiers",
+    "address": "cite douzi 03 n 56 - bab ezzouar - alger",
+    "email": "abdessamed.amouri@esaa.dz",
+    "phone": "0770407300"
+  },
+  {
+    "name": "BATNA TECHNOLOGY INCUBATOR",
+    "incubator_type": "private",
     "city": "Batna",
-    "mapLocation": "https://maps.app.goo.gl/tXuA5AQN11RQBMkx5"
+    "address": "126 cite Lombarkia Park a fourage batna, 05000",
+    "email": "abdelhadisohaib505@gmail.com",
+    "phone": "0676449729"
+  },
+  {
+    "name": "ADVALIANS",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "address": "80 FERME PONS KOUBA",
+    "email": "advalians.dz@gmail.com",
+    "phone": "0542075102"
+  },
+  {
+    "name": "Jijel University Incubator",
+    "incubator_type": "university",
+    "city": "Jijel",
+    "address": "universite de jijel bp 98, jijel 18000",
+    "email": "incubator@univ-jijel.dz",
+    "phone": "0661330784"
+  },
+  {
+    "name": "Khenchela University Business Incubator",
+    "incubator_type": "university",
+    "city": "Khenchela",
+    "address": "Abbas Laghrour University Khenchela - Algiersia - (PO Box 1252 Route A Bouaghi -40004-)",
+    "email": "incubateur@univ-khenchela.dz",
+    "phone": "0672636404"
+  },
+  {
+    "name": "Tebessa University Incubator",
+    "incubator_type": "university",
+    "city": "Tebessa",
+    "address": "Route de Constantine, 12000",
+    "email": "mohamed-cherif.nait-hamoud@univ-tebessa.dz",
+    "phone": "0673116613"
+  },
+  {
+    "name": "Oran 1 University Incubator",
+    "incubator_type": "university",
+    "city": "Oran",
+    "address": "Campus TALEB MOURAD SALIM - EX IGMO - UNIVERSITE ORAN 1 - Ahmed benbella",
+    "email": "incubateur.univ.oran1@gmail.com",
+    "phone": "0550040070"
+  },
+  {
+    "name": "Souk Ahras University Incubator",
+    "incubator_type": "university",
+    "city": "Souk Ahras",
+    "address": "Universite de Souk Ahras Souk Ahras , 41000 - Algerie",
+    "description": "Research service in the form of an incubator at Souk Ahras University",
+    "email": "amel.bendjeddou@univ-soukahras.dz",
+    "website": "https://www.univ-soukahras.dz/",
+    "socials": [
+      "https://www.facebook.com/people/حاضنة-أعمال-جامعة-محمد-الشريف-مساعدية/100087675555390/"
+    ]
+  },
+  {
+    "name": "CRAPC Incubator",
+    "incubator_type": "university",
+    "city": "Tipaza",
+    "address": "Centre de Recherche Scientifique et Technique en Analyses Physico-Chimiques (CRAPC) BP 384, Zone Industrielle RP 42004 Bou Ismail, Tipaza, Algiersie.",
+    "description": "The mission of public research incubators is to promote the creation of innovative companies from public research results or in connection with public research.",
+    "email": "startupcrapc@gmail.com"
+  },
+  {
+    "name": "Constantine 3 University Incubator",
+    "incubator_type": "university",
+    "city": "Constantine",
+    "address": "UNIVERSITE CONSTANTINE 3, VILLE NOUVELLE ALI MENDJELI, CONSTANTINE 25100",
+    "description": "Structure that offers a support program to create, develop or accelerate start-ups. Located at the Faculty of Information and Communication, the incubator has coworking space, offices, a laboratory, a kitchenette, a meeting room and a projection space where entrepreneurs can come to work.",
+    "email": "karima.boufenara@univ-constantine3.dz",
+    "website": "https://univ-constantine3.dz/",
+    "socials": [
+      "https://www.facebook.com/UC3SB/?locale=fr_FR"
+    ]
+  },
+  {
+    "name": "BAGIN",
+    "incubator_type": "private",
+    "city": "Guelma",
+    "address": "26 copperative immobiliere N92, 2eme etage, guelma",
+    "description": "BAGIN is the only private incubator in Guelma wilaya, created a year ago by SARL BAG Services, a well-equipped place to welcome innovative project holders. Since its creation, BAGIN has already facilitated access to entrepreneurship training/coaching (design thinking, BMC, BP, GTM strategies,...) as well as personalized coaching",
+    "email": "bagservices.algeria@gmail.com",
+    "phone": "0782984075",
+    "website": "http://bagservices.net/",
+    "socials": [
+      "https://www.facebook.com/profile.php?id=100077427908893"
+    ]
+  },
+  {
+    "name": "ESSBO Incubator",
+    "incubator_type": "university",
+    "city": "Oran",
+    "address": "BP 1042, Saim Mohamed 31003, Oran, Algiersia",
+    "description": "ESSBO Incubator is a support and incubation space for ESSBO students wishing to create their startup. It provides an ecosystem for innovative project holders and/or startups to materialize their ideas.",
+    "email": "wefaboughrara@gmail.com",
+    "website": "http://www.essb-oran.dz/index.php/fr/"
+  },
+  {
+    "name": "Tamanrasset University Incubator",
+    "incubator_type": "university",
+    "city": "Tamanrasset",
+    "address": "Cite des enseignants universitaire rue Aeroport tahagart Tamanghasset",
+    "description": "Tamanrasset University Business Incubator consists of the incubator director's office, and carries out its activities in several structures allocated to the incubator during the activity period, namely: a coworking space, a meeting room, a computer room that needs computer equipment, a lecture hall. It also uses technical laboratory facilities when needed, and there are bodies supporting the incubator: the Entrepreneurship House, the University/Enterprise liaison office, the Innovation and Technology Support Center, and the Quality Assurance Cell.",
+    "email": "abdelbasset.azzaoui@gmail.com",
+    "socials": [
+      "https://www.facebook.com/abdelbasset.azzaoui"
+    ]
+  },
+  {
+    "name": "TECHNOLOGY.INCUBATOR_ALGIERS1",
+    "incubator_type": "university",
+    "city": "Algiers",
+    "address": "02, RUE DIDOUCHE MOURAD ALGER CENTRE, ALGER",
+    "description": "The University of Algiers 1 business incubator is an incubator affiliated with the higher education and scientific research sector. It is interested in students and researchers carrying creative ideas and transforming their projects through financial, technical and administrative support into start-ups or mini-enterprises and contributing to the growth of state revenues.",
+    "email": "nouveauprojetalger1@gmail.com",
+    "website": "https://incubateur.univ-alger.dz",
+    "socials": [
+      "https://www.facebook.com/profile.php?id=100088831745577"
+    ]
+  },
+  {
+    "name": "ORKIDS",
+    "city": "Annaba",
+    "address": "ANNABA INNOVATION CENTER - EL BOUNI .",
+    "description": "ORKIDS is a sociocultural incubator. Creating and developing a company requires activating multiple resources: knowledge, energy, time, money, network... and one of the reliable means to avoid exhaustion is to use an incubator. ORKIDS allows to concentrate these resources and organize them to optimize project development management",
+    "email": "orkids.dz@gmail.com",
+    "website": "https://orkids-dz.com/",
+    "socials": [
+      "https://www.facebook.com/Orkids.Incubator"
+    ]
+  },
+  {
+    "name": "Emir Abdelkader University Business Incubator",
+    "incubator_type": "university",
+    "city": "Constantine",
+    "address": "Kaddour Boumeddous avenue, postal box NO137 Constantine",
+    "description": "The Emir Abdelkader University for Islamic Sciences business incubator in Constantine is interested in supporting students about to graduate in bachelor's, master's and doctoral stages who intend to enter the world of entrepreneurship by providing specialized training programs in the fields of management, accounting, taxation, marketing and commercial negotiation, and allocating spaces at the university to form headquarters for their emerging institutions at nominal prices to facilitate their obtaining the commercial register.",
+    "email": "S.OKBA@YAHOO.FR",
+    "website": "http://www.univ-emir-constantine.edu.dz/",
+    "socials": [
+      "https://www.facebook.com/people/حاضنة-الأعمال-لجامعة-الأمير-عبد-القادر-للعلوم-الإسلامية/100086308556160/"
+    ]
+  },
+  {
+    "name": "ESI Sidi Bel Abbes Incubator",
+    "incubator_type": "university",
+    "city": "Sidi Bel Abbes",
+    "address": "3, rue de la paix .Sidi-Bel-ABBES",
+    "email": "h.badsi@esi-sba.dz",
+    "website": "https://www.esi-sba.dz",
+    "socials": [
+      "https://www.facebook.com/esisba.edu"
+    ]
+  },
+  {
+    "name": "DIGITAL BEE HIVE",
+    "incubator_type": "private",
+    "city": "Bouira",
+    "address": "Lot 12, cite Farachati, SEC 58, bloc 03, bât 01, 6eme etage, Bouira, 10000, Algerie.",
+    "description": "Digital Bee Hive: is a regional startup incubator, created in Bouira with the aim of offering incubation services through support and assistance to innovative project holders and startups in all its phases, design, creation and development of their companies and projects in various sectors of activity and domains such as IT.",
+    "email": "commercial@digital-bee-hive.com",
+    "phone": "0660733342",
+    "website": "https://digital-bee-hive.com/",
+    "socials": [
+      "https://www.facebook.com/people/Digital-Beehive/100083418395143/"
+    ]
+  },
+  {
+    "name": "Emir Synergy",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "address": "2 place emir abdelkader, alger centre",
+    "description": "Emir Synergy is an incubator/accelerator focused on health tech, biotech & greentech. Current programs: 1. Founder Institute Algiersia: 4-month startup core acceleration program with access to lifetime free post-program support exclusive to FI alumni companies. 2. Biodesign Algiersia: based on Stanford Biodesign program for innovation in healthcare providing solutions for unmet clinical needs.",
+    "email": "emirsynergy@gmail.com",
+    "phone": "0561681178",
+    "website": "https://www.emirsynergy.com",
+    "socials": [
+      "https://www.facebook.com/emirsynergy"
+    ]
+  },
+  {
+    "name": "Algiers 3 University Business Incubator",
+    "incubator_type": "university",
+    "city": "Algiers",
+    "address": "Algiers",
+    "description": "The Algiers 3 University business incubator accompanies students carrying innovative project ideas in order to obtain a 'startup certificate/patent certificate' according to ministerial decree 1275, and provides them with all support including guidance, training, means and relationship building to launch their startups",
+    "email": "incub.alger3@gmail.com",
+    "socials": [
+      "https://www.facebook.com/profile.php?id=100087801578310"
+    ]
+  },
+  {
+    "name": "Itihad Int",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "address": "Villa 15bis, rue zareb medjadj, les pins maritimes, Algiers",
+    "description": "With 22 years of entrepreneurial experience, the founders of the Itihad accelerator/incubator have taken the bet to share their expertise in the field of creating innovative startups on the bootstrap model, financed by the client, which they themselves followed to launch several startups.",
+    "email": "am.chetta@itihad.group",
+    "phone": "0555044489",
+    "website": "https://itihad.group"
+  },
+  {
+    "name": "Horizon Business Space",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "address": "Semi-Zone Industriel Bt.49-50 Bir Mourad Rais . ALGER",
+    "description": "A business development consulting company in business model and business plan with expertise in business strategy and business development and capital of more than 50 business plans carried out for various industries. Your ally to achieve your goals, whether you want to grow a nascent business, expand an existing business or diversify to other activities.",
+    "email": "horizonbs.dz@gmail.com",
+    "phone": "0661512799",
+    "website": "http://www.horizon-bs.com/",
+    "socials": [
+      "https://www.facebook.com/Horizonbusinessspace/"
+    ]
+  },
+  {
+    "name": "Blida 2 University Business Incubator",
+    "incubator_type": "university",
+    "city": "Blida",
+    "address": "Universite blida2",
+    "description": "The Blida 2 University business incubator is structured as a joint steering committee comprising: representatives from Blida 2 University, representatives from the Agency for Valorization of Scientific Research Results and Technological Development, and a representative of economic partners. To promote entrepreneurial thinking in the university environment and strengthen the spirit of initiative among students to create their projects, it also supports creativity and innovation and works to create a real impact on the local economy by supporting students in their ambitions",
+    "email": "s.hadj_aissa@live.fr",
+    "website": "https://www.univ-blida2.dz"
+  },
+  {
+    "name": "CoWorkzone",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "address": "05 ABK TROIS HORLOGES LA CROIX KOUBA .ALGER",
+    "description": "CoWorkzone is an incubation company active in the field of entrepreneurship and startups. Dedicated to entrepreneurs, freelancers and innovators. Our company offers coworking services and workspaces adapted to different sectors of activity as well as training and coaching services in different fields.",
+    "email": "COWORKZONE1@GMAIL.COM",
+    "phone": "0770547511",
+    "website": "https://www.co-workzone.com/",
+    "socials": [
+      "https://www.facebook.com/workzonedz/"
+    ]
+  },
+  {
+    "name": "COMET",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "address": "Lotissement 19 mai 1956 N°16 BP65 Baba Hassen Algiers",
+    "email": "mehdi.longuar@gmail.com",
+    "phone": "0561691683",
+    "website": "https://workincomet.com/",
+    "socials": [
+      "https://www.facebook.com/CometCoworking"
+    ]
+  },
+  {
+    "name": "Ferhat Abbas University Incubator",
+    "incubator_type": "university",
+    "city": "Setif",
+    "address": "Ex Faculte de Droit. Campus El Bez.  SETIF",
+    "description": "The Ferhat Abbas University incubator was approved in September 2021. It is located at the former Faculty of Law in front of the Nait-Belkacem auditorium. Its main missions are: to welcome and accompany any innovative project holder, help the project holder to formalize their idea, select and validate the long-term project idea.",
+    "email": "benalifarouk@univ-setif.dz",
+    "website": "https://incubateur.univ-setif.dz/"
+  },
+  {
+    "name": "ESCF Constantine Incubator",
+    "incubator_type": "university",
+    "city": "Constantine",
+    "address": "Ecole superieure de comptabilite et de finances de Constantine",
+    "description": "The Constantine Higher School of Accounting and Finance incubator is a space dedicated to students carrying innovative ideas. The incubator accompanies students from different cycles and pays particular attention to those who are at the end of the cycle (3rd year bachelor, 2nd year master and doctoral students).",
+    "email": "incubateur.escf@escf-constantine.dz",
+    "website": "https://escf-constantine.dz/",
+    "socials": [
+      "https://www.facebook.com/profile.php?id=100087399019042"
+    ]
+  },
+  {
+    "name": "USTHB-ICOSNET Start-ups Incubator",
+    "incubator_type": "university",
+    "city": "Algiers",
+    "address": "babezzouar ALGER",
+    "description": "The USTHB-ICOSNET incubator is the first structure of USTHB University dedicated to entrepreneurship and startups, based on a public-private partnership. The target objective is: to instill and strengthen the entrepreneurial spirit in students wishing to be actively involved in the development of an innovative entrepreneurial project.",
+    "email": "bferganieee@gmail.com",
+    "website": "https://www.incub-ui.net"
+  },
+  {
+    "name": "Biskra University Incubator",
+    "incubator_type": "university",
+    "city": "Biskra",
+    "address": "Universite de Biskra,  BP 145 RP, 07000 Biskra, Algerie",
+    "description": "The University of Biskra incubator was created by internal decision, and later regularized with the promulgation of its ministerial decision of February 14, 2022. Named a common research service incubator of the University of Biskra. The incubator partners are the university, ANVREDET and the socio-economic sector. The incubator has two sections: for hosting, training, and consulting",
+    "email": "incubator@univ-biskra.dz",
+    "website": "https://incubateur.univ-biskra.dz/",
+    "socials": [
+      "https://www.facebook.com/profile.php?id=100086519618111"
+    ]
+  },
+  {
+    "name": "Adrar University Innovant Project Incubator",
+    "incubator_type": "university",
+    "city": "Adrar",
+    "address": "route nationale n°6, adrar, 01000",
+    "description": "Adrar University Innovant Project Incubator (ADUIPI) is a recently created structure that succeeds the House of Entrepreneurship active since 2014 at the university. Its missions are: support, training, piloting and incubation of innovative student projects.",
+    "email": "khedidja.ait.hammouda@univ-adrar.edu.dz",
+    "website": "https://www.univ-adrar.edu.dz/",
+    "socials": [
+      "https://www.facebook.com/univeadrar"
+    ]
+  },
+  {
+    "name": "Medea University Incubator",
+    "city": "Medea",
+    "address": "universite de Medea",
+    "description": "Medea University incubator works on developing projects proposed by students, professors and staff of Medea University and Medea wilaya. The incubator has carried out a series of activities since 2021, such as the best startup competition in Medea wilaya and participated in several events including the visit of the Minister of Higher Education and Scientific Research and the Minister of Knowledge Economy and Emerging and Micro Enterprises which took place on November 5, 2022, and the incubated projects received satisfaction from both ministers",
+    "email": "omarharoun88@gmail.com",
+    "website": "http://www.univ-medea.dz/incubateur",
+    "socials": [
+      "https://www.facebook.com/profile.php?id=100086748294119"
+    ]
+  },
+  {
+    "name": "Constantine 1 University Incubator",
+    "city": "Constantine",
+    "address": "universite constantine 1, route ain el bey 25000 constantine",
+    "description": "It is a common research service in the form of an incubator at Constantine 1 University, composed of two sections (management and training, and maintenance and safety of scientific equipment) in addition to auxiliary support structures including the Entrepreneurship House, the Career Center, BLEU and BUTT, and CATI.",
+    "email": "incubateur@umc.edu.dz"
+  },
+  {
+    "name": "Laghouat University Incubator",
+    "city": "Laghouat",
+    "address": "Universite Amar Telidji BP 37 G Route de Guardaia 03000 – Laghouat – Algerie",
+    "description": "The Laghouat university incubator is located at the second university pole of Laghouat (technological pole) and has two spacious buildings of two floors each, one dedicated to the Entrepreneurship House and the other including the FabLab, coaching rooms and an administrative floor. The incubator team is made up of teachers.",
+    "email": "incubl@lagh-univ.dz",
+    "website": "https://lagh-univ.dz",
+    "socials": [
+      "https://www.facebook.com/profile.php?id=100087407557155"
+    ]
+  },
+  {
+    "name": "Chadli Bendjdid El Tarf University",
+    "incubator_type": "university",
+    "city": "El Tarf",
+    "address": "El Tarf",
+    "description": "The incubator is a reception and support structure that will enable the management of innovative and valuable projects, products of scientific research among researchers, doctoral students, and master's students from all specialties. It allows project holders to create their startups and micro-enterprises, and prepares them to become entrepreneurs. They offer organized training.",
+    "email": "n.nouri@univ-eltarf.dz"
+  },
+  {
+    "name": "IBDAA Incubator",
+    "incubator_type": "private",
+    "city": "Tamanrasset",
+    "address": "MOUFLOUN TAMANRASSET",
+    "description": "IBDAA is a social enterprise led by women that aspires to the development of local, sustainable and inclusive economies. We support agents of change in a community that brings together: project leaders, artists, entrepreneurs, start-ups, companies, cooperatives, freelancers, associations, experts, incubators, students, etc. with a passion for re-inventing a new way of creation.",
+    "email": "TAGUEDDDASOUAD@GMAIL.COM",
+    "phone": "0558010484",
+    "socials": [
+      "https://m.facebook.com/IBDAA-incubator-104421945231021/?ref=py_c"
+    ]
+  },
+  {
+    "name": "BlueGreen Business",
+    "city": "Tipaza",
+    "mapLocation": "https://www.google.com/maps?q=36.746136,3.056818",
+    "incubator_type": "private",
+    "address": "25 rue youcef khoudja - cherchell",
+    "description": "Created since 2016, BGB accompanies project holders (startups, entrepreneurs,...) before, during and after creation, as we provide them with a workspace and a team of consultants experienced in various fields, not to mention the professional network for obtaining direct or indirect financing but also access to the market. The objective of BGB is to incubate more startups.",
+    "email": "bluegreenbusiness@gmail.com",
+    "phone": "0696062831"
+  },
+  {
+    "name": "GrowUp in Algiersia Incubator",
+    "incubator_type": "private",
+    "city": "Tizi Ouzou",
+    "address": "CITE 05 JUILLET BAT A1 CAGE03 ETAGE 01 TIZI OUZOU 15000",
+    "email": "spanetstation@gmail.com",
+    "phone": "0661282933",
+    "website": "http://www.netstation.dz",
+    "socials": [
+      "https://www.facebook.com/Net-Station-100284512709367"
+    ]
+  },
+  {
+    "name": "Batna 1 University Incubator",
+    "city": "Batna",
+    "address": "Wilaya de Batna",
+    "email": "incubateur@univ-batna.dz",
+    "phone": "0662189980",
+    "website": "https://vrpg.univ-batna.dz/",
+    "socials": [
+      "https://web.facebook.com/incubatuniv"
+    ]
+  },
+  {
+    "name": "El Oued University Incubator",
+    "incubator_type": "university",
+    "city": "El Oued",
+    "address": "Cite Echott, El Oued -BP 789, El Oued 39000",
+    "email": "ferhat-mohammedfouad@univ-eloued.dz",
+    "phone": "0668022334",
+    "website": "https://www.univ-eloued.dz/incubator/index.php"
+  },
+  {
+    "name": "Business Valley Incubator",
+    "incubator_type": "private",
+    "city": "Batna",
+    "address": "cite brahim saada - kechida - batna",
+    "description": "Business Valley is an incubator-accelerator for startups, aiming to develop the innovation ecosystem in the state of Batna, and push the wheel of innovation locally and nationally. Our slogan: 'Think outside the box'.",
+    "email": "nadjemeddine.bouzid@gmail.com",
+    "phone": "0667788724",
+    "website": "https://linktr.ee/Business.valley?fbclid=IwAR3zr8-lDqRS8eY6Jir2jvpZL_cmPPOgNP9qG6QEoMirTBptBViKLsW4s1w",
+    "socials": [
+      "https://www.facebook.com/businessvalley.hub/about/?ref=page_internal"
+    ]
+  },
+  {
+    "name": "WomWork",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "address": "12 chemin sidi yahia, bir mourad rais",
+    "description": "WomWork by The Annex DZ is the first 100% female incubator in Algiersia, and more broadly in Africa. Its mission is to encourage, promote and support female entrepreneurship, create opportunities and female employment particularly in the recent startup market and digital economy. It aims to contribute to the empowerment of women in Algiersia and Africa.",
+    "email": "theannexdz@gmail.com",
+    "phone": "0770866333",
+    "website": "https://www.theannexdz.net",
+    "socials": [
+      "https://www.facebook.com/womwork.dz"
+    ]
+  },
+  {
+    "name": "8 Mai 1945 Guelma University Incubator",
+    "incubator_type": "university",
+    "city": "Guelma",
+    "address": "Wilaya de Guelma",
+    "description": "The 8 Mai 1945 Guelma University incubator, installed in 2021, is a reception and support structure for innovative projects. It helps project holders formalize their ideas and validate their long-term feasibility. It also offers project holders support in training, consulting, financing and premises until the company is created.",
+    "email": "aidabenh@gmail.com",
+    "phone": "0799306252",
+    "website": "https://polepro.univ-guelma.dz/",
+    "socials": [
+      "https://www.facebook.com/P%C3%B4le-Pro-Universit%C3%A9-8-Mai-1945-Guelma-334238343907964"
+    ]
+  },
+  {
+    "name": "Blida 1 Incubator",
+    "incubator_type": "university",
+    "city": "Blida",
+    "address": "Wilaya de Blida",
+    "description": "The Blida incubator is the natural culmination that complements the activities of the Entrepreneurship House initially present. The incubator offers students and new graduates an adequate and favorable educational environment and framework for the realization of their start-up through the presence of test rooms as well as engineering and IT support made available to them.",
+    "email": "cdcblida@gmail.com",
+    "phone": "0556626688",
+    "website": "https://blidauniversitycareercenter.com/https://www.cdc-ublida1.com"
+  },
+  {
+    "name": "Bubble Algiersie",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "address": "04 Rue Mohamed Abdou El Mouradia. Algiers",
+    "description": "We are a hosting and business creation support structure. We supervise future entrepreneurs from idea to operation by providing them with fully equipped infrastructure, personalized coaching, daily guidance, a support program with the help of coaches specialized in their field.",
+    "email": "sarah@bubblealgerie.com",
+    "phone": "0557276614",
+    "website": "http://bubblealgerie.com/",
+    "socials": [
+      "https://www.facebook.com/LaBulleSpace"
+    ]
+  },
+  {
+    "name": "Djanet Incubator",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "address": "Mobilis bab ezzouar alger",
+    "description": "Djanet Incubator - Mobilis incubator aims to promote entrepreneurial spirit and digital innovation among young people in Algiersia. It offers an international standard incubation program: with an adapted training plan, financing, personalized support, equipped premises and the possibility of establishing commercial partnerships with the best projects.",
+    "email": "INCUBATEUR@MOBILIS.DZ",
+    "phone": "0661681575",
+    "website": "https://mobilis.dz/"
   },
   {
     "name": "Crearena",
-    "foundedYear": 2020,
-    "website": "https://crearena.io",
-    "linkedin": "https://linkedin.com/company/crearena",
-    "city": "Blida"
+    "incubator_type": "private",
+    "city": "Blida",
+    "mapLocation": "https://www.google.com/maps?q=36.489506,2.838858",
+    "address": "Rue de la marine fouka",
+    "description": "The incubator provides startups with several platforms and services to guarantee a better collective workspace to encourage collective intelligence with high added value, as well as a network of multidisciplinary mentors, coaches, and trainers to ensure support at all levels for startups.",
+    "email": "billel@crearena.co",
+    "phone": "0770412971"
   },
   {
-    "name": "Djazairia",
-    "foundedYear": 2025,
-    "linkedin": "https://linkedin.com/company/djazairia",
-    "website": "https://djazairia.com",
-    "city": "Algiers",
-    "mapLocation": "https://maps.app.goo.gl/EhQwwiGx64Zee6kt8"
+    "name": "Smart Consulting and Training Academy",
+    "incubator_type": "private",
+    "city": "Touggourt",
+    "mapLocation": "https://www.google.com/maps?q=36.72486,3.174998",
+    "address": "N 9 ilot 266 AEK",
+    "description": "Our values: from innovative idea to a high-performing, reliable and sustainable startup. Key activity: we provide project holders with know-how: coaching, support and knowledge transfer. Resources: premises, services, materials, technologies. Networking: helps future startups understand their market and business opportunities.",
+    "email": "moncef.moad@gmail.com",
+    "phone": "0553333094",
+    "website": "http://www.smartalgerie.com",
+    "socials": [
+      "https://www.facebook.com/SmartAlgiersiecom-103040525274053"
+    ]
   },
   {
-    "name": "IdeaCrafters",
-    "foundedYear": 2025,
-    "website": "https://ideacrafters.com",
-    "linkedin": "https://www.linkedin.com/company/ideacrafters",
-    "city": "Algiers"
+    "name": "A Souf T.T (Souf Business Booster)",
+    "incubator_type": "private",
+    "city": "El Oued",
+    "mapLocation": "https://www.google.com/maps?q=33.356589,6.850517",
+    "address": "cite Rimmel",
+    "description": "The center is 4 years old, located in the middle of El Oued city. Since our first days, we have been making heavy steps toward entrepreneurship in the region. We established the career development center with World Learning and we organized the first fair of entrepreneurship in the city. We helped in the birth of three social businesses, which are still making a remarkable impact.",
+    "email": "bachirtahraoui1@gmail.com",
+    "phone": "0554648805"
   },
   {
-    "name": "Incubia",
-    "foundedYear": 2025,
-    "website": "https://www.incubia-algerie.com",
+    "name": "Westinnov Incube & Accelerate by Idenet",
+    "incubator_type": "private",
     "city": "Oran",
-    "mapLocation": "https://maps.app.goo.gl/kfQVrkq7S27n4U4u9"
-  },
-  {
-    "name": "IncubMe",
-    "foundedYear": 2018,
-    "website": "https://incubme.com",
-    "linkedin": "https://linkedin.com/company/incubme",
-    "city": "Algiers",
-    "mapLocation": "https://maps.app.goo.gl/5P5c22goArhTn8Q29"
-  },
-  {
-    "name": "Leancubator",
-    "foundedYear": 2020,
-    "website": "https://leancubator.com",
-    "linkedin": "https://linkedin.com/company/leancubatordz",
-    "city": "Algiers",
-    "mapLocation": "https://maps.app.goo.gl/TLF7kaEUPRvWtH6CA"
+    "mapLocation": "https://www.google.com/maps?q=35.700992,-0.628205",
+    "address": "14 avenue tafna belaire oran",
+    "email": "idenet@solution-gprs.com",
+    "phone": "0661203883"
   },
   {
     "name": "Makers Lab",
-    "foundedYear": 2021,
-    "website": "https://makerslab.dz",
-    "linkedin": "https://www.linkedin.com/company/dz-makers-lab",
+    "incubator_type": "private",
     "city": "Oran",
-    "mapLocation": "https://maps.app.goo.gl/4rshHwDz977S6nVz9"
+    "mapLocation": "https://www.google.com/maps?q=35.709757,-0.595856",
+    "address": "Bordj Business Center, 8eme etage, Morchid. Oran.",
+    "description": "Makers Lab is an incubation and acceleration space whose objective is to allow creators of innovative companies to find an ecosystem favorable to their development. It is about giving innovative project holders and startups opportunities to create, develop, solve, discuss, debate but also to present and sell their solutions through the Mlab network.",
+    "email": "hello@makerslab.dz",
+    "phone": "0560656633",
+    "website": "https://www.makerslab.dz",
+    "socials": [
+      "https://www.facebook.com/dzmakerslab/"
+    ]
   },
   {
-    "name": "Orkids Incubator",
-    "foundedYear": 2022,
-    "website": "https://orkids-dz.com",
-    "linkedin": "https://linkedin.com/company/orkids-dz",
-    "city": "Annaba",
-    "mapLocation": "https://maps.app.goo.gl/VQXgyGtht3pT9LYJA"
+    "name": "Tek2hub by Brenco",
+    "incubator_type": "private",
+    "city": "Algiers, Bechar",
+    "address": "29 rue Souidani Boudjema Cheraga Algiers et 36 rue commande Fredj Centre-Ville Bechar",
+    "description": "We believe in the sharing economy, responsible and societal action, digital and innovative business models. We are neither incubator, nor accelerator nor business angel but all three at the same time. #tek2hub by brenco sees these male and female entrepreneurs as future business partners. Therefore we remain always open to listen, advise and support, project holders creating startups as well as young startups. We work in this perspective to develop partnerships with Algiersian and regional actors to increase our capacities and skills in supporting entrepreneurs in the broad sense and to allow these entrepreneurs we support to participate in international training, exchange, competition or fundraising actions.",
+    "email": "Tek2hub@brenco-algerie.com",
+    "phone": "0619830669"
   },
   {
     "name": "Sylabs",
-    "foundedYear": 2015,
-    "linkedin": "https://linkedin.com/company/djazairia",
+    "incubator_type": "private",
     "city": "Algiers",
-    "mapLocation": "https://maps.app.goo.gl/VZTnE3bE1kc855Nm9"
+    "mapLocation": "https://www.google.com/maps?q=36.77401,3.058583",
+    "address": "25 AVENUE ZIGHOUD YOUCEF ALGER CENTRE 16004",
+    "description": "Sylabs is a company operating in the fields of entrepreneurship and technology, based in the heart of Algiers since 2015. We provide all the necessary services to entrepreneurs, startups and tech innovators so they can start and realize their adventure. We also encourage the use of digital technologies in all sectors.",
+    "email": "hello@Sylabs-dz.com",
+    "phone": "0770766878"
+  },
+  {
+    "name": "Algiersia Venture",
+    "incubator_type": "public",
+    "city": "Algiers",
+    "mapLocation": "https://www.google.com/maps?q=36.742975,2.970254",
+    "address": "Dounia Parc - Delly brahim",
+    "description": "A-Venture is the initiative of the Algiersian government and the first of its kind public open innovation center in Algiersia. It will play a pioneering role by offering and facilitating logistical and development structures for startups and incubators as well as various accompaniment programs complying with international standards. Its function is complementary to the 'Algiersia Start-up Fund', already launched in October 2020, by ensuring the monitoring and supervision of the beneficiary startups. In addition to assisting high potential startups in fine-tuning their business processes, A-Venture will become a platform to attract top investors for selected startups via its challenging program. Unleashing the full potential of Algiersian youth and its emerging and dynamic entrepreneurship is at the highest priority.",
+    "email": "contact@Algiersiaventure.net",
+    "phone": "0770666333",
+    "website": "https://www.algeriaventure.net",
+    "socials": [
+      "https://www.facebook.com/AlgiersiaVenture/"
+    ]
+  },
+  {
+    "name": "Sarl Incubate IT",
+    "incubator_type": "private",
+    "city": "Setif",
+    "mapLocation": "https://www.google.com/maps?q=36.18733,5.440893"
+  },
+  {
+    "name": "M'Sila University Incubator",
+    "incubator_type": "university",
+    "city": "M'Sila",
+    "mapLocation": "https://www.google.com/maps?q=35.713629,4.524543",
+    "address": "Mohamed Boudiaf University, PO Box: 166 M'Sila 28000, Algiersia",
+    "description": "M'Sila University Business Incubator was established pursuant to the following ministerial decisions: the ministerial decision dated 08/10/2020 published in Official Gazette No. 166, and pursuant to ministerial decision No. 182 dated 27/05/2019. The idea of establishing the incubator dates back to the Autumn University event which was held in December 2018 and its goal was to accompany students and researchers in establishing their emerging institutions and registering the largest possible number of innovative projects and patents.",
+    "email": "ahmed.mir@univ-msila.dz",
+    "phone": "0669215759"
+  },
+  {
+    "name": "Boumerdes University Incubator",
+    "incubator_type": "university",
+    "city": "Boumerdes",
+    "mapLocation": "https://www.google.com/maps?q=36.75765,3.458428",
+    "address": "Universite de boumerdes",
+    "description": "The Boumerdes University incubator is a common space for helping project holders who wish to develop an activity from an innovative idea related to scientific and technological research now benefit from the opportunities offered by the incubator in partnership with ANVREDET and DGRSDT. Our slogan: the student is a job creator and not a job seeker.",
+    "email": "INCUBATEUR@univ-boumerdes.dz",
+    "phone": "0666909527"
+  },
+  {
+    "name": "Constantine 2 University Incubator",
+    "incubator_type": "university",
+    "city": "Constantine",
+    "mapLocation": "https://www.google.com/maps?q=36.246049,6.567818",
+    "address": "Universite Abdelhamid Mehri Constantine 2 Nouvelle ville Ali Mendjeli, BP: 67A, Constantine – Algerie",
+    "description": "The Constantine 2 University incubator is a support structure for innovative projects for creating startups. Any natural person (students, young graduates, researchers and even an administrative staff) wishing to test their innovative idea, set up their innovative project or develop an activity (projects, startups) can benefit from the framework of the UC2 incubator.",
+    "email": "incubator@univ-constantine2.dz",
+    "phone": "0773242020",
+    "website": "https://www.univ-constantine2.dz/incubator/",
+    "socials": [
+      "https://www.facebook.com/IncubatorUC2"
+    ]
+  },
+  {
+    "name": "ENSA Incubator (National Higher School of Agronomy)",
+    "incubator_type": "university",
+    "city": "Algiers",
+    "mapLocation": "https://www.google.com/maps?q=36.722082,3.147493",
+    "address": "Hassen Badi, Oued smar Daira, El Harrach 16004, Algiers",
+    "description": "The ENSA incubator has a coworking space, 2 multipurpose rooms, a meeting room, a prototyping workshop, a meeting room and several individual offices available to incubatees. In addition to the means set up by the school (laboratories, libraries, experimental station, horticultural station, central farm and fablab).",
+    "email": "manal.nechar@edu.ensa.dz",
+    "phone": "0657936143",
+    "website": "http://www.ensa.dz",
+    "socials": [
+      "https://www.facebook.com/ENSAINCUBATOR"
+    ]
+  },
+  {
+    "name": "National Polytechnic School Technology Incubator",
+    "incubator_type": "university",
+    "city": "Algiers",
+    "mapLocation": "https://www.google.com/maps?q=36.723179,3.148578",
+    "address": "10 Rue des Freres OUDEK, El Harrach 16200",
+    "description": "The ENP technology incubator is an ecosystem that catalyzes socio-economic development and innovation, by supporting innovative project holders in labeling, intellectual and industrial property, the prototyping phase, business creation and the commercialization of products or services.",
+    "email": "technology.incubator@g.enp.edu.dz",
+    "phone": "2382853",
+    "website": "https://www.enp.edu.dz/fr/incubateur2/",
+    "socials": [
+      "https://m.facebook.com/ENP.INCUBATOR.TECH.2.INNOV/"
+    ]
+  },
+  {
+    "name": "Industrial Technologies Research Center",
+    "incubator_type": "university",
+    "city": "Algiers",
+    "mapLocation": "https://www.google.com/maps?q=36.758071,2.960911",
+    "address": "https://www.crti.dz",
+    "description": "University incubator",
+    "phone": "2119"
+  },
+  {
+    "name": "Leancubator",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "mapLocation": "https://www.google.com/maps?q=36.761933,2.94507",
+    "address": "Kouba-Algiers - Algerie",
+    "description": "Leancubator presents itself as an innovation hub whose mission is to offer a multitude of support and acceleration programs for startups and innovative projects with high potential, in different sectors based on open innovation as a key factor in the realization of innovative projects.",
+    "email": "gm.herizi@leancubator.com",
+    "phone": "0558445081"
+  },
+  {
+    "name": "Incubme",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "mapLocation": "https://www.google.com/maps?q=36.758308,2.916586",
+    "address": "lot bouchaoui 03, N 333 - Cheraga",
+    "description": "Incubme is an Algiersian project incubator founded by executives and business leaders in Algiersia and abroad. The objective of creating Incubme was from the beginning to allow young people with potential and the will to create their own company to find the ecosystem that would allow them to realize their projects.",
+    "email": "adel.AMALOU@INCUBME.COM",
+    "phone": "0552337388"
+  },
+  {
+    "name": "Setif Innovation Hub",
+    "incubator_type": "private",
+    "city": "Setif",
+    "mapLocation": "https://www.google.com/maps?q=36.191318,5.440377",
+    "address": "45, Avenue Bellout med tahar, CITE TLIDJENE SETIF",
+    "description": "A one-year program including six months of post-incubation from September 2020 to September 2021. The S.I.H incubator, created by MBI Algiersia Campus, is a support structure for creating startups dedicated to project holders. The SIH incubator aims to transform an innovative idea into a high-performing startup. SIH is currently incubating 23 projects from different wilayas online and in person.",
+    "email": "sih@mbisetif.dz",
+    "phone": "0557909406"
+  },
+  {
+    "name": "Innoest Company",
+    "incubator_type": "private",
+    "city": "Tebessa",
+    "mapLocation": "https://www.google.com/maps?q=35.397942,8.112447",
+    "address": "CENTRE VILLE TEBESSA",
+    "description": "Innoest Company is a general startup incubator in Tebessa wilaya. Its added value is development within the framework of partnership (PPP). Our value is to develop startups at the local level, especially in shadow areas. Our commitment is to support project holders and guide them towards the promising sectors of the region.",
+    "email": "fethi.gasmi@outlook.com",
+    "phone": "0798471317"
+  },
+  {
+    "name": "Capcowork",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "mapLocation": "https://www.google.com/maps?q=36.742738,3.027887",
+    "address": "132 rue mohamed belouizdad",
+    "description": "Capcowork is a space dedicated to creating an innovative and effective entrepreneurial ecosystem whose dynamics are based on the promotion and supervision of Algiersian youth with the support of local economic actors. Capcowork was created in 2018 with the aim of promoting entrepreneurship, federating, supporting and accompanying young entrepreneurs in the creation process.",
+    "email": "hamoudi.mohamed@gmail.com",
+    "phone": "0540600455"
+  },
+  {
+    "name": "Coworkart",
+    "incubator_type": "private",
+    "city": "Tizi Ouzou",
+    "mapLocation": "https://www.google.com/maps?q=36.700996,4.035964",
+    "address": "Immeuble Boudarene, zhun sud, quartier a, nouvelle ville, 15000 tizi-ouzou",
+    "description": "Coworkart is a shared workspace, dedicated to the establishment of all project holders. It is a space that allows everyone who works there to get started at low cost. The advantages for these companies are sharing structural and operating costs, flexibility according to needs, promoting exchange, creativity, and the emergence of common projects.",
+    "email": "contact@coworkart.net",
+    "phone": "0557256512"
+  },
+  {
+    "name": "Algiersian Center for Social Entrepreneurship (ACSE)",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "mapLocation": "https://www.google.com/maps?q=36.750485,3.054097",
+    "address": "rue des cousins gouraya birkhadem",
+    "description": "The Algiersian Center for Social Entrepreneurship ACSE was created in 2016 with the aim of promoting social entrepreneurship in Algiersia and supporting Algiersian entrepreneurs in the creation, development and sustainability of their businesses. To do this, we created our incubator in 2018 in which we annually support around thirty projects.",
+    "email": "benslama.meriem@gmail.com",
+    "phone": "0556869343"
+  },
+  {
+    "name": "MZI",
+    "incubator_type": "private",
+    "city": "Laghouat",
+    "mapLocation": "https://www.google.com/maps?q=33.816478,2.834477",
+    "address": "cite 38 logts el goitine",
+    "description": "Incubator creation to support young startups in Laghouat wilaya in the following areas: training - training - creation - operator/young startup intermediation.",
+    "email": "CCI-LAGHOUAT@HOTMAIL.FR",
+    "phone": "0661123960"
+  },
+  {
+    "name": "Maktabee Services",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "mapLocation": "https://www.google.com/maps?q=36.772584,3.055083",
+    "address": "Cooperative mheni moussa ouled moussa",
+    "description": "Maktabee is a hybrid incubator, which means our services are accessible via a digital platform in addition to what we offer in our headquarters in Algiers center. The Maktabee incubator provides support in everything related to training, consulting, and execution of each business activity, during the first stages of a company's life cycle, and after its creation.",
+    "email": "dr.taibi.said@gmail.com",
+    "phone": "0790003962"
+  },
+  {
+    "name": "SCALY - Entrepreneurship & Innovation Hub",
+    "incubator_type": "private",
+    "city": "Setif",
+    "mapLocation": "https://www.google.com/maps?q=36.202279,5.440614",
+    "address": "Cite des 40 logements, setif",
+    "description": "SCALY is an entrepreneurship and innovation center, intended for a community of entrepreneurs and startups. Powered by SARL CMESA Consulting, SCALY was created in November 2020 with the aim of promoting entrepreneurship and supporting Algiersian entrepreneurs in launching and growing their innovative projects through made in bladi incubation programs.",
+    "email": "ouasetmedredha@gmail.com",
+    "phone": "0559627201"
+  },
+  {
+    "name": "Sarl Hadinat Aamel Mostadam",
+    "incubator_type": "private",
+    "city": "Boumerdes",
+    "mapLocation": "https://www.google.com/maps?q=36.741112,3.283175",
+    "address": "Cite 351 Boumerdes",
+    "description": "Mostadam Incubator was founded in 2021 with the aim of developing and supporting entrepreneurship and establishing institutions in Algiersia, in addition to supporting those initiatives in cooperation with a group of specialists, consultants, experts and business owners. It mainly targets the green economy sector or sustainable development projects in general, and offers a variety of programs to many groups such as students, innovators, ambitious youth, and those wishing to create new projects.",
+    "email": "moostadam@gmail.com",
+    "phone": "0770940106",
+    "website": "https://moostadam.dz"
+  },
+  {
+    "name": "Djazairup",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "mapLocation": "https://www.google.com/maps?q=31.959256,5.332467",
+    "address": "Cite 394 lgts Sonatrach Bât 14, 3eme etage, Oued Berridja, les grands vents, Cheraga, Algiers",
+    "description": "The Djazairup incubator is located on 17 October street, Ifri la Silis district, Talbi building on the 2nd floor, Ouargla, a residential area and a commercial activity zone. The incubator has an area of approximately 180m² and consists of 4 work rooms for project holders, a meeting room, a relaxation/isolation room, the staff office, a kitchenette and bathrooms.",
+    "email": "brahim.embouazza@algerianstartupinitiative.com",
+    "phone": "0550672607",
+    "website": "http://djazairup.org/",
+    "socials": [
+      "https://web.facebook.com/djazairup"
+    ]
+  },
+  {
+    "name": "ABP Space",
+    "incubator_type": "private",
+    "city": "Bejaia",
+    "mapLocation": "https://www.google.com/maps?q=36.74351,5.049618",
+    "address": "ROUTE DE BOULIMAT IGHIL EL BORDJ BEJAIA",
+    "description": "ABP Space organization was created to help and support startups. Its main mission is to assist holders of innovative and technological projects. It is located in the heart of Bejaia city, has human resources such as experts, trainers and equipment to accomplish its noble mission of developing the region and the economic ecosystem to accelerate the development process.",
+    "email": "LO.MOUSSOUNI@ABP-SPACE.COM",
+    "phone": "0660510807",
+    "website": "https://www.abp-space.com",
+    "socials": [
+      "https://www.facebook.com/abpspace"
+    ]
+  },
+  {
+    "name": "Futuris Institute",
+    "incubator_type": "private",
+    "city": "Setif",
+    "mapLocation": "https://www.google.com/maps?q=36.190839,5.407076",
+    "address": "Futuris institute, park mall setif 19000 setif",
+    "description": "The incubator co-located in an ultra-modern infrastructure with Futuris Institute specialized in technological innovation and entrepreneurship, offers multidisciplinary support to project holders: entrepreneurship training, prototyping, coaching mentoring by international experts, networking with investors and the Algiersian diaspora, high speed internet, 24/7 access.",
+    "email": "futuris.institute@gmail.com",
+    "phone": "0550470129"
+  },
+  {
+    "name": "Student Center i2E (Innovation, Entrepreneurship and Employment)",
+    "incubator_type": "university",
+    "city": "Tlemcen",
+    "mapLocation": "https://www.google.com/maps?q=34.9196,-1.303934",
+    "description": "The Student Center i2E (Innovation, Entrepreneurship and Employment) incubator at the University of Tlemcen has reception and support structures for innovative projects directly linked to research. It helps project holders formalize their ideas and validate the feasibility of projects. It is responsible for accomplishing two missions: valorization mission and awareness mission.",
+    "email": "sarihassounz@yahoo.com",
+    "phone": "0550943653",
+    "website": "https://www.univ-tlemcen.dz"
+  },
+  {
+    "name": "NAD Center",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "mapLocation": "https://www.google.com/maps?q=36.750904,2.936316",
+    "address": "cite 36 logement ghaboube boualem el harrach algeria",
+    "description": "NAD Center is a private support, reception and business creation support structure, which allows to move from idea to realization and consolidation of a structured project - entrepreneurship awareness conferences, workshops, specific training, competitions - realization of business plans, domiciliation, logistical means; coworking space - financing.",
+    "email": "mohamedsalem1602@gmail.com",
+    "phone": "0699098855"
+  },
+  {
+    "name": "Shifter Incubator",
+    "incubator_type": "private",
+    "city": "Constantine",
+    "mapLocation": "https://www.google.com/maps?q=36.342972,6.641589",
+    "address": "CITE BOUMERZOUG LOT DAIF N10",
+    "description": "1st incubator in Constantine. New project going on: 01 startup + 04 innovative projects in the pipeline. Big vision.",
+    "email": "t.adjabi@hygie-pro.com",
+    "phone": "0555040729",
+    "website": "https://www.hygie-pro.com"
+  },
+  {
+    "name": "Filaha Innov",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "mapLocation": "https://www.google.com/maps?q=36.733142,2.927393",
+    "address": "CD 233  rte de Bouchaoui ouled fayet",
+    "description": "Filaha Innov incubator aims to support project holders in agriculture, agri-food, and olive farming. The incubator’s objective is to encourage initiative and support business creation, from the early project stage through to transforming projects into viable commercial enterprises. To achieve this, Filaha Innov relies on in-depth knowledge of the sectors it covers.",
+    "email": "contact.fondation@filaha-dz.com",
+    "phone": "0770917676"
+  },
+  {
+    "name": "start hub",
+    "mapLocation": "https://www.google.com/maps?q=36.740483,3.039067",
+    "incubator_type": "private",
+    "city": "Algiers",
+    "address": "36 CHEMIN SIDI YAHIA, 1 etage, hydra, alger",
+    "description": "start hub offers a comprehensive service solution for entrepreneurs.  our objective is to facilitate their journey, develop their capabilities, and connect them with potential investors for scaling. our service offering is comprehensive 1.\tlogistics solution 2.\tadministrative solution 3.\tmedia and pr 4.\ttraining and development 5.\tfunding",
+    "email": "marouan@theaddress-dz.com",
+    "phone": "0560032888"
   }
 ]

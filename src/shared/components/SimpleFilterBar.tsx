@@ -1,4 +1,4 @@
-import { Search, X, ArrowUpDown, MapPin } from 'lucide-react';
+import { Search, X, ArrowUpDown, MapPin, Filter } from 'lucide-react';
 import {
   Select,
   SelectContent,
@@ -10,8 +10,8 @@ import { Input } from '@/components/ui/input';
 import type { SortOrder } from '@/shared/types';
 
 interface SimpleFilterBarProps {
-  sortOrder: SortOrder;
-  onSortOrderChange: (order: SortOrder) => void;
+  sortOrder?: SortOrder;
+  onSortOrderChange?: (order: SortOrder) => void;
   searchQuery: string;
   onSearchChange: (query: string) => void;
   totalCount: number;
@@ -20,6 +20,9 @@ interface SimpleFilterBarProps {
   cities?: string[];
   selectedCity?: string;
   onCityChange?: (city: string) => void;
+  types?: string[];
+  selectedType?: string;
+  onTypeChange?: (type: string) => void;
 }
 
 const SimpleFilterBar = ({
@@ -33,6 +36,9 @@ const SimpleFilterBar = ({
   cities,
   selectedCity,
   onCityChange,
+  types,
+  selectedType,
+  onTypeChange,
 }: SimpleFilterBarProps) => {
   return (
     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
@@ -75,17 +81,37 @@ const SimpleFilterBar = ({
         </Select>
       )}
 
+      {/* Type Filter */}
+      {types && types.length > 0 && onTypeChange && (
+        <Select value={selectedType || 'all'} onValueChange={onTypeChange}>
+          <SelectTrigger className="w-full sm:w-[160px] h-10 bg-background border-border">
+            <Filter className="w-4 h-4 mr-2 text-muted-foreground" />
+            <SelectValue placeholder="All Types" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All Types</SelectItem>
+            {types.map((type) => (
+              <SelectItem key={type} value={type}>
+                {type}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      )}
+
       {/* Sort */}
-      <Select value={sortOrder} onValueChange={(value) => onSortOrderChange(value as SortOrder)}>
-        <SelectTrigger className="w-full sm:w-[180px] h-10 bg-background border-border">
-          <ArrowUpDown className="w-4 h-4 mr-2 text-muted-foreground" />
-          <SelectValue />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="desc">Newest First</SelectItem>
-          <SelectItem value="asc">Oldest First</SelectItem>
-        </SelectContent>
-      </Select>
+      {sortOrder && onSortOrderChange && (
+        <Select value={sortOrder} onValueChange={(value) => onSortOrderChange(value as SortOrder)}>
+          <SelectTrigger className="w-full sm:w-[180px] h-10 bg-background border-border">
+            <ArrowUpDown className="w-4 h-4 mr-2 text-muted-foreground" />
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="desc">Newest First</SelectItem>
+            <SelectItem value="asc">Oldest First</SelectItem>
+          </SelectContent>
+        </Select>
+      )}
     </div>
   );
 };
