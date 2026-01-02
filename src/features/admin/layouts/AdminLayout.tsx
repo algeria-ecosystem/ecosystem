@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { supabase } from '@/integrations/supabase/client';
+
 import {
   Rocket,
   Layers,
@@ -8,15 +10,24 @@ import {
   LayoutDashboard,
   Menu,
   X,
-  Database
+  Database,
+  LogOut
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { Button } from '@/components/ui/button';
+import { toast } from 'sonner';
 
 const AdminLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    toast.success('Logged out successfully');
+    navigate('/login');
+  };
 
   const navItems = [
     { path: '/admin', label: 'Dashboard', icon: LayoutDashboard, exact: true },
@@ -85,7 +96,15 @@ const AdminLayout = () => {
             ))}
           </nav>
 
-          <div className="p-4 border-t border-border mt-auto">
+          <div className="p-4 border-t border-border mt-auto space-y-4">
+            <Button
+              variant="outline"
+              className="w-full justify-start gap-2 text-red-500 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-950/20 border-red-200 dark:border-red-900"
+              onClick={handleLogout}
+            >
+              <LogOut className="w-4 h-4" />
+              Sign Out
+            </Button>
             <div className="flex items-center justify-between">
               <span className="text-sm text-muted-foreground">Theme</span>
               <ThemeToggle />

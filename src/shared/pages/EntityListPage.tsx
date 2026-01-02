@@ -9,14 +9,14 @@ import Pagination from '@/shared/components/Pagination';
 import EmptyState from '@/shared/components/EmptyState';
 import { Loader2, Plus } from 'lucide-react';
 import type { Category, Entity, MediaType, Wilaya } from '@/shared/types/entity';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 
 type FilterType = 'category' | 'wilaya' | 'media_type' | 'none';
 type SortOrder = 'asc' | 'desc';
 
 interface EntityListPageProps {
-  entityTypeSlug: string;
-  title: string;
+  entityTypeSlug?: string;
+  title?: string;
   description?: string;
   filterType?: FilterType;
   filterLabel?: string;
@@ -25,12 +25,43 @@ interface EntityListPageProps {
 const ITEMS_PER_PAGE = 9;
 
 const EntityListPage = ({
-  entityTypeSlug,
-  title,
-  description,
-  filterType = 'none',
-  filterLabel = 'Filter'
-}: EntityListPageProps) => {
+  entityTypeSlug: propSlug,
+  title: propTitle,
+  description: propDesc,
+  filterType: propFilterType,
+  filterLabel: propFilterLabel
+}: EntityListPageProps = {}) => {
+  const { type } = useParams<{ type: string }>();
+  const location = useLocation();
+
+  // Determine Type Slug
+  const entityTypeSlug = propSlug || type || 'startup'; // Default to startup if nothing
+
+  // Determine metadata based on slug if not provided
+  // Simple mapping can be moved to a util or handled dynamically
+  const getMetadata = (slug: string) => {
+    const map: Record<string, any> = {
+      'startup': { title: 'Startups', desc: 'Discover innovative startups.', filter: 'category' },
+      'incubator': { title: 'Incubators', desc: 'Find the perfect incubator.', filter: 'wilaya' },
+      'accelerator': { title: 'Accelerators', desc: 'Scale your business.', filter: 'wilaya' },
+      'coworking-space': { title: 'Coworking Spaces', desc: 'Collaborative environments.', filter: 'wilaya' },
+      'media': { title: 'Media', desc: 'Tech and business news.', filter: 'media_type' },
+      'community': { title: 'Communities', desc: 'Join vibrant communities.', filter: 'wilaya' },
+      'event': { title: 'Events', desc: 'Upcoming tech events.', filter: 'none' },
+      'resource': { title: 'Resources', desc: 'Essential resources.', filter: 'none' },
+    };
+
+    const def = map[slug] || { title: slug.charAt(0).toUpperCase() + slug.slice(1) + 's', desc: `Browse ${slug}s`, filter: 'none' };
+    return def;
+  };
+
+  const metadata = getMetadata(entityTypeSlug.replace(/s$/, '')); // handle plural/singular slightly loosely
+
+  const title = propTitle || metadata.title;
+  const description = propDesc || metadata.desc;
+  const filterType = propFilterType || metadata.filter;
+  const filterLabel = propFilterLabel || 'Filter';
+
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedFilter, setSelectedFilter] = useState('all');
   const [sortOrder, setSortOrder] = useState<SortOrder>('desc');

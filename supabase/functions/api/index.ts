@@ -107,74 +107,95 @@ serve(async (req) => {
       error = lookupError;
     }
 
-    // --- ADMIN ROUTES (Should verify user is admin, but current app has no Auth UI implemented yet) ---
-    // User is just using client-side admin routes. We will replicate "insecure" admin for now or use the passed token.
-    // Using supabaseAdmin (Service Role) to ensure operations succeed regardless of RLS.
-    // TODO: Verify Authorization header to ensure caller is actually an admin. 
+    // --- ADMIN ROUTES ---
 
-    else if (method === 'POST' && task === 'admin-get-entities') {
-      const { data: allEntities, error: fetchError } = await supabaseAdmin
-        .from('entities')
-        .select(`
-            *,
-            wilaya:wilayas(name),
-            type:entity_types(name)
-        `)
-        .order('created_at', { ascending: false });
-      data = allEntities;
-      error = fetchError;
-    }
-
-    else if (method === 'POST' && task === 'admin-upsert-entity') {
-      const { task: _task, ...payload } = reqBody;
-      const { error: upsertError } = await supabaseAdmin.from('entities').upsert(payload);
-      if (upsertError) throw upsertError;
-      data = { success: true };
-    }
-
-    else if (method === 'POST' && task === 'admin-approve-entity') {
-      const { id } = reqBody;
-      const { error: updateError } = await supabaseAdmin.from('entities').update({ status: 'approved' }).eq('id', id);
-      if (updateError) throw updateError;
-      data = { success: true };
-    }
-
-    else if (method === 'POST' && task === 'admin-delete-entity') {
-      const { id } = reqBody;
-      const { error: delError } = await supabaseAdmin.from('entities').delete().eq('id', id);
-      if (delError) throw delError;
-      data = { success: true };
-    }
-
-    // --- GENERIC ADMIN ROUTES ---
-    else if (method === 'POST' && task === 'admin-list-table') {
-      const { table } = reqBody;
-      if (!['entity_types', 'wilayas', 'categories', 'media_types'].includes(table || '')) {
-        throw new Error('Invalid table access');
+    else if (method === 'POST' && task?.startsWith('admin-')) {
+      // VERIFY AUTHENTICATION
+      const authHeader = req.headers.get('Authorization');
+      if (!authHeader) {
+        return new Response(JSON.stringify({ error: 'Missing Authorization Header' }), { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
       }
-      const { data: tableData, error: tableError } = await supabaseAdmin.from(table).select('*').order('name');
-      data = tableData;
-      error = tableError;
-    }
 
-    else if (method === 'POST' && task === 'admin-upsert-table') {
-      const { table, data: rowData } = reqBody;
-      if (!['entity_types', 'wilayas', 'categories', 'media_types'].includes(table || '')) {
-        throw new Error('Invalid table access');
-      }
-      const { error: upsertError } = await supabaseAdmin.from(table).upsert(rowData);
-      if (upsertError) throw upsertError;
-      data = { success: true };
-    }
+      // Get the user from the token
+      const token = authHeader.replace('Bearer ', '');
+      const { data: { user }, error: authError } = await supabase.auth.getUser(token);
 
-    else if (method === 'POST' && task === 'admin-delete-table') {
-      const { table, id } = reqBody;
-      if (!['entity_types', 'wilayas', 'categories', 'media_types'].includes(table || '')) {
-        throw new Error('Invalid table access');
+      if (authError || !user) {
+        return new Response(JSON.stringify({ error: 'Unauthorized', details: authError?.message }), { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
       }
-      const { error: delError } = await supabaseAdmin.from(table).delete().eq('id', id);
-      if (delError) throw delError;
-      data = { success: true };
+
+      // OPTIONAL: Check if user is specific admin email
+      // const adminEmail = Deno.env.get('ADMIN_EMAIL');
+      // if (adminEmail && user.email !== adminEmail) {
+      //    return new Response(JSON.stringify({ error: 'Forbidden' }), { status: 403, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      // }
+
+      // Proceed with Admin Tasks
+      if (task === 'admin-get-entities') {
+        const { data: allEntities, error: fetchError } = await supabaseAdmin
+          .from('entities')
+          .select(`
+                *,
+                wilaya:wilayas(name),
+                type:entity_types(name)
+            `)
+          .order('created_at', { ascending: false });
+
+        if (fetchError) throw fetchError;
+        data = allEntities;
+      }
+
+      else if (task === 'admin-upsert-entity') {
+        const { task: _task, ...payload } = reqBody;
+        const { error: upsertError } = await supabaseAdmin.from('entities').upsert(payload);
+        if (upsertError) throw upsertError;
+        data = { success: true };
+      }
+
+      else if (task === 'admin-approve-entity') {
+        const { id } = reqBody;
+        const { error: updateError } = await supabaseAdmin.from('entities').update({ status: 'approved' }).eq('id', id);
+        if (updateError) throw updateError;
+        data = { success: true };
+      }
+
+      else if (task === 'admin-delete-entity') {
+        const { id } = reqBody;
+        const { error: delError } = await supabaseAdmin.from('entities').delete().eq('id', id);
+        if (delError) throw delError;
+        data = { success: true };
+      }
+
+      // Generic Admin Routes
+      else if (task === 'admin-list-table') {
+        const { table } = reqBody;
+        if (!['entity_types', 'wilayas', 'categories', 'media_types'].includes(table || '')) {
+          throw new Error('Invalid table access');
+        }
+        const { data: tableData, error: tableError } = await supabaseAdmin.from(table).select('*').order('name');
+        if (tableError) throw tableError;
+        data = tableData;
+      }
+
+      else if (task === 'admin-upsert-table') {
+        const { table, data: rowData } = reqBody;
+        if (!['entity_types', 'wilayas', 'categories', 'media_types'].includes(table || '')) {
+          throw new Error('Invalid table access');
+        }
+        const { error: upsertError } = await supabaseAdmin.from(table).upsert(rowData);
+        if (upsertError) throw upsertError;
+        data = { success: true };
+      }
+
+      else if (task === 'admin-delete-table') {
+        const { table, id } = reqBody;
+        if (!['entity_types', 'wilayas', 'categories', 'media_types'].includes(table || '')) {
+          throw new Error('Invalid table access');
+        }
+        const { error: delError } = await supabaseAdmin.from(table).delete().eq('id', id);
+        if (delError) throw delError;
+        data = { success: true };
+      }
     }
 
     else {
