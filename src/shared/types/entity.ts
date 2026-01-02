@@ -37,6 +37,7 @@ export interface Entity {
   founded_year?: number;
   map_location?: string;
   image_url?: string;
+  status: 'pending' | 'approved' | 'rejected';
   created_at: string;
   // Joins
   wilaya?: Wilaya;

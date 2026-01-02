@@ -7,6 +7,12 @@ import { ThemeProvider } from "@/hooks/use-theme";
 import About from "@/shared/pages/About";
 import NotFound from "@/shared/pages/NotFound";
 import EntityListPage from "@/shared/pages/EntityListPage";
+import AdminLayout from "@/features/admin/layouts/AdminLayout";
+import AdminDashboard from "@/features/admin/pages/AdminDashboard";
+import EntityTypesManager from "@/features/admin/pages/EntityTypesManager";
+import EntitiesManager from "@/features/admin/pages/EntitiesManager";
+import GenericLookupManager from "@/features/admin/pages/GenericLookupManager";
+import SubmitEntityPage from "@/shared/pages/SubmitEntityPage";
 
 const queryClient = new QueryClient();
 
@@ -97,6 +103,18 @@ const App = () => (
             } />
 
             <Route path="/about" element={<About />} />
+            <Route path="/submit" element={<SubmitEntityPage />} />
+
+            {/* Admin Routes */}
+            <Route path="/admin" element={<AdminLayout />}>
+              <Route index element={<AdminDashboard />} />
+              <Route path="entity-types" element={<EntityTypesManager />} />
+              <Route path="entities" element={<EntitiesManager />} />
+              <Route path="categories" element={<GenericLookupManager tableName="categories" title="Categories" />} />
+              <Route path="media-types" element={<GenericLookupManager tableName="media_types" title="Media Types" fields={[{ key: 'icon_url', label: 'Icon URL' }, { key: 'icon_emoji', label: 'Emoji' }]} />} />
+              <Route path="wilayas" element={<GenericLookupManager tableName="wilayas" title="Wilayas" fields={[{ key: 'code', label: 'Code', type: 'number' }]} />} />
+            </Route>
+
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

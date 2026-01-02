@@ -62,7 +62,8 @@ const EntityListPage = ({
           entity_categories(category:categories(*)),
           entity_media_types(media_type:media_types(*))
         `)
-        .eq('type_id', entityType?.id);
+        .eq('type_id', entityType?.id)
+        .eq('status', 'approved');
 
       const { data, error } = await query;
       if (error) throw error;
