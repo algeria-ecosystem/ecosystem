@@ -5,6 +5,7 @@ dist
 build
 coverage
 public
+*.md
 
 # lock files
 package-lock.json
