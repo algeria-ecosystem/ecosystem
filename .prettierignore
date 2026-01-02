@@ -1,0 +1,13 @@
+# Directories
+.github
+node_modules
+dist
+build
+coverage
+public
+
+# lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
