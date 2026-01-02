@@ -15,6 +15,7 @@ import Events from "@/features/events/pages/Index";
 import Resources from "@/features/resources/pages/Index";
 import About from "@/shared/pages/About";
 import NotFound from "@/shared/pages/NotFound";
+import StartupDetails from "@/features/startups/pages/StartupDetails";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/startup/:slug" element={<StartupDetails />} />
             <Route path="/incubators" element={<Incubators />} />
             <Route path="/accelerators" element={<Accelerators />} />
             <Route path="/coworking-spaces" element={<CoworkingSpaces />} />
