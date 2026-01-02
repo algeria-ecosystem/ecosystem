@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { toast } from 'sonner';
-import Header from '@/shared/components/Header';
+import Header from '@/features/shared/components/Header';
 
 const LoginPage = () => {
   const navigate = useNavigate();

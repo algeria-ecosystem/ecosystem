@@ -1,4 +1,4 @@
-import { Search, X, ArrowUpDown } from 'lucide-react';
+import { Search, X, ArrowUpDown, MapPin } from 'lucide-react';
 import {
   Select,
   SelectContent,
@@ -7,32 +7,33 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
-import type { Category } from '../types';
-import type { SortOrder } from '@/shared/types';
+import type { SortOrder } from '@/features/shared/types';
 
-interface FilterBarProps {
-  categories: Category[];
-  selectedCategory: string;
-  onCategoryChange: (category: string) => void;
+interface SimpleFilterBarProps {
   sortOrder: SortOrder;
   onSortOrderChange: (order: SortOrder) => void;
   searchQuery: string;
   onSearchChange: (query: string) => void;
   totalCount: number;
   filteredCount: number;
+  searchPlaceholder?: string;
+  cities?: string[];
+  selectedCity?: string;
+  onCityChange?: (city: string) => void;
 }
 
-const FilterBar = ({
-  categories,
-  selectedCategory,
-  onCategoryChange,
+const SimpleFilterBar = ({
   sortOrder,
   onSortOrderChange,
   searchQuery,
   onSearchChange,
   totalCount,
   filteredCount,
-}: FilterBarProps) => {
+  searchPlaceholder = "Search...",
+  cities,
+  selectedCity,
+  onCityChange,
+}: SimpleFilterBarProps) => {
   return (
     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
       {/* Search Input */}
@@ -42,7 +43,7 @@ const FilterBar = ({
           type="text"
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
-          placeholder="Search startups..."
+          placeholder={searchPlaceholder}
           className="pl-10 pr-10 h-10 bg-background border-border"
         />
         {searchQuery && (
@@ -56,20 +57,23 @@ const FilterBar = ({
         )}
       </div>
 
-      {/* Category Filter */}
-      <Select value={selectedCategory} onValueChange={onCategoryChange}>
-        <SelectTrigger className="w-full sm:w-[160px] h-10 bg-background border-border">
-          <SelectValue placeholder="All Categories" />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="all">All Categories</SelectItem>
-          {categories.map((category) => (
-            <SelectItem key={category.id} value={category.id}>
-              {category.name}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
+      {/* City Filter */}
+      {cities && cities.length > 0 && onCityChange && (
+        <Select value={selectedCity || 'all'} onValueChange={onCityChange}>
+          <SelectTrigger className="w-full sm:w-[160px] h-10 bg-background border-border">
+            <MapPin className="w-4 h-4 mr-2 text-muted-foreground" />
+            <SelectValue placeholder="All Cities" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All Cities</SelectItem>
+            {cities.map((city) => (
+              <SelectItem key={city} value={city}>
+                {city}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      )}
 
       {/* Sort */}
       <Select value={sortOrder} onValueChange={(value) => onSortOrderChange(value as SortOrder)}>
@@ -82,10 +86,9 @@ const FilterBar = ({
           <SelectItem value="asc">Oldest First</SelectItem>
         </SelectContent>
       </Select>
-
     </div>
   );
 };
 
-export default FilterBar;
+export default SimpleFilterBar;
 

@@ -1,5 +1,5 @@
-import Header from '@/shared/components/Header';
-import Footer from '@/shared/components/Footer';
+import Header from '@/features/shared/components/Header';
+import Footer from '@/features/shared/components/Footer';
 import { Mail, Linkedin, Github, Plus, ExternalLink, Target } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from 'react-router-dom';

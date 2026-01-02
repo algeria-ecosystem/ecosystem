@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/sheet";
 import { toast } from 'sonner';
 import { Loader2, Plus, X } from 'lucide-react';
-import type { Entity, Wilaya, EntityType, Category, MediaType } from '@/shared/types/entity';
+import type { Entity, Wilaya, EntityType, Category, MediaType } from '@/features/shared/types/entity';
 
 // Define a type for editing that extends the Entity type but allows for form state
 interface EntityFormData {

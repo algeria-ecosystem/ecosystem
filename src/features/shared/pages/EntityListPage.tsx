@@ -1,14 +1,14 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
-import Header from '@/shared/components/Header';
-import Footer from '@/shared/components/Footer';
-import FilterBar from '@/shared/components/FilterBar';
-import EntityCard from '@/shared/components/EntityCard';
-import Pagination from '@/shared/components/Pagination';
-import EmptyState from '@/shared/components/EmptyState';
+import Header from '@/features/shared/components/Header';
+import Footer from '@/features/shared/components/Footer';
+import FilterBar from '@/features/shared/components/FilterBar';
+import EntityCard from '@/features/shared/components/EntityCard';
+import Pagination from '@/features/shared/components/Pagination';
+import EmptyState from '@/features/shared/components/EmptyState';
 import { Loader2, Plus } from 'lucide-react';
-import type { Category, Entity, MediaType, Wilaya } from '@/shared/types/entity';
+import type { Category, Entity, MediaType, Wilaya } from '@/features/shared/types/entity';
 import { Link, useLocation, useParams } from 'react-router-dom';
 
 type FilterType = 'category' | 'wilaya' | 'media_type' | 'none';
