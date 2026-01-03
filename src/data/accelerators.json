@@ -28,12 +28,21 @@
   },
   {
     "name": "Founder Institute Algeria",
-    "foundedYear": 2025,
+    "foundedYear": 2022,
     "description": "Founder Institute Algeria plugs local founders straight into a global network—over 200 cities strong and rooted in Silicon Valley.",
     "website": "https://fi.co/apply/algiers",
     "linkedin": "https://www.linkedin.com/company/the-founder-institute",
     "city": "Algiers",
     "mapLocation": "https://maps.app.goo.gl/BwWH8FXGonAxmXK88"
+  },
+  {
+    "name": "ANPT Incubator",
+    "foundedYear": 2010,
+    "description": "The ANPT Incubator is Algeria's leading state-backed hub for digital innovation. It provides a comprehensive support ecosystem for ICT entrepreneurs, offering physical hosting across multiple national technoparks and a Virtual Incubation Program (VIP). The incubator mentors founders through a 4-year journey—from initial ideation and business modeling to the creation and scaling of market-ready startups.",
+    "website": "https://anpt.dz/incubation",
+    "linkedin": "https://www.linkedin.com/company/natp",
+    "city": "Algiers",
+    "mapLocation": "https://maps.app.goo.gl/hf9NX7T1morgKArz8"
   },
   {
     "name": "UNDP Accelerator Lab",
