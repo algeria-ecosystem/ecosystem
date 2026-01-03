@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { ExternalLink, Linkedin, Calendar, MapPin, Map } from "lucide-react";
 import type { Accelerator } from "../types";
+import { Linkedin, Calendar, MapPin, Map } from 'lucide-react';
+import type { Accelerator } from '../types';
+import BaseCard from '@/shared/components/BaseCard';
 
 interface AcceleratorCardProps {
   accelerator: Accelerator;
@@ -70,19 +73,35 @@ const AcceleratorCard = ({ accelerator }: AcceleratorCardProps) => {
             )}
           </p>
         </div>
+      </div>
 
-        {accelerator.website && (
+      <div className="flex items-center gap-2">
+        {accelerator.mapLocation && (
           <a
-            href={accelerator.website}
+            href={accelerator.mapLocation}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0 w-9 h-9 rounded-xl border border-border/60 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/60 hover:bg-primary/5 transition-all duration-300 group-hover:scale-110"
-            aria-label={`Visit ${accelerator.name} website`}
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-primary hover:bg-primary/5 border border-transparent hover:border-primary/20 transition-all duration-300"
+            aria-label={`View ${accelerator.name} on map`}
           >
-            <ExternalLink className="w-4 h-4" />
+            <Map className="w-4 h-4" />
+            <span>Map</span>
+          </a>
+        )}
+        {accelerator.linkedin && (
+          <a
+            href={accelerator.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-primary hover:bg-primary/5 border border-transparent hover:border-primary/20 transition-all duration-300"
+          >
+            <Linkedin className="w-4 h-4" />
+            <span>LinkedIn</span>
           </a>
         )}
       </div>
+    </>
+  );
 
       <div className="flex items-center justify-between pt-5 border-t border-border/40">
         <div className="flex items-center gap-2">
@@ -122,6 +141,14 @@ const AcceleratorCard = ({ accelerator }: AcceleratorCardProps) => {
         </div>
       </div>
     </article>
+  return (
+    <BaseCard
+      name={accelerator.name}
+      description={accelerator.description}
+      url={accelerator.website}
+      subtitle={subtitle}
+      footer={footer}
+    />
   );
 };
 
