@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { ExternalLink, Linkedin, Calendar, MapPin, Map } from 'lucide-react';
-import type { Accelerator } from '../types';
+import { useState } from "react";
+import { ExternalLink, Linkedin, Calendar, MapPin, Map } from "lucide-react";
+import type { Accelerator } from "../types";
 
 interface AcceleratorCardProps {
   accelerator: Accelerator;
@@ -9,28 +9,33 @@ interface AcceleratorCardProps {
 const AcceleratorCard = ({ accelerator }: AcceleratorCardProps) => {
   const [imageError, setImageError] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
-  let domain = '';
+  let domain = "";
   try {
     if (accelerator.website) {
-      domain = new URL(accelerator.website).hostname.replace(/^www\./, '');
+      domain = new URL(accelerator.website).hostname.replace(/^www\./, "");
     }
   } catch {
-    domain = '';
+    domain = "";
   }
-  const faviconUrl = domain ? `https://fetchfavicon.com/i/${domain}?size=64` : '';
-  
+  const faviconUrl = domain
+    ? `https://fetchfavicon.com/i/${domain}?size=64`
+    : "";
+
   // Check if description is long enough to need truncation (approximately 100 characters for 2 lines)
   const needsTruncation = accelerator.description.length > 100;
-  const displayDescription = isExpanded || !needsTruncation 
-    ? accelerator.description 
-    : accelerator.description.substring(0, 100);
-  
+  const displayDescription =
+    isExpanded || !needsTruncation
+      ? accelerator.description
+      : accelerator.description.substring(0, 100);
+
   return (
-    <article className="group relative bg-card rounded-2xl border border-border/60 p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1">
-      <div className="flex items-start gap-4 mb-5">
+    <article className="group relative bg-card rounded-2xl border border-border/60 p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 flex flex-col h-full">
+      <div className="flex items-start gap-4 mb-5 flex-grow min-h-0">
         {imageError || !faviconUrl ? (
           <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-secondary/40 flex items-center justify-center">
-            <span className="text-xl font-bold text-primary">{accelerator.name.charAt(0).toUpperCase()}</span>
+            <span className="text-xl font-bold text-primary">
+              {accelerator.name.charAt(0).toUpperCase()}
+            </span>
           </div>
         ) : (
           <img
@@ -41,7 +46,7 @@ const AcceleratorCard = ({ accelerator }: AcceleratorCardProps) => {
           />
         )}
 
-        <div className="flex-1 min-w-0">
+        <div className="flex flex-col h-full min-w-0">
           <h3 className="font-bold text-lg text-card-foreground truncate mb-1 group-hover:text-primary transition-colors duration-300">
             {accelerator.name}
           </h3>
@@ -51,16 +56,16 @@ const AcceleratorCard = ({ accelerator }: AcceleratorCardProps) => {
               {accelerator.city}
             </p>
           )}
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-muted-foreground flex-grow">
             {displayDescription}
-            {needsTruncation && !isExpanded && '... '}
-            {needsTruncation && isExpanded && ' '}
+            {needsTruncation && !isExpanded && "... "}
+            {needsTruncation && isExpanded && " "}
             {needsTruncation && (
               <button
                 onClick={() => setIsExpanded(!isExpanded)}
                 className="text-xs text-primary hover:text-primary/80 font-medium transition-colors inline"
               >
-                {isExpanded ? 'Show less' : 'Show more'}
+                {isExpanded ? "Show less" : "Show more"}
               </button>
             )}
           </p>
@@ -84,10 +89,12 @@ const AcceleratorCard = ({ accelerator }: AcceleratorCardProps) => {
           <Calendar className="w-4 h-4 text-muted-foreground" />
           <div>
             <p className="text-xs text-muted-foreground mb-0.5">Founded</p>
-            <p className="text-sm font-semibold text-foreground">{accelerator.foundedYear}</p>
+            <p className="text-sm font-semibold text-foreground">
+              {accelerator.foundedYear}
+            </p>
           </div>
         </div>
-        
+
         <div className="flex items-center gap-2">
           {accelerator.mapLocation && (
             <a
@@ -119,4 +126,3 @@ const AcceleratorCard = ({ accelerator }: AcceleratorCardProps) => {
 };
 
 export default AcceleratorCard;
-
