@@ -1,5 +1,23 @@
 [
   {
+    "name": "AET Industries",
+    "foundedYear": 2021,
+    "categoryIds": [
+      "hardware", "iot"
+    ],
+    "website": "https://aetindustries.dz",
+    "linkedin": "https://www.linkedin.com/company/aetindustries"
+  },
+  {
+    "name": "Aghsalni",
+    "foundedYear": 2022,
+    "categoryIds": [
+      "saas", "mobility"
+    ],
+    "website": "https://aghsalni.vercel.app",
+    "linkedin": "https://www.linkedin.com/company/aghsalni"
+  },
+  {
     "name": "AhlQuran",
     "foundedYear": 2022,
     "categoryIds": [
@@ -28,6 +46,15 @@
     "linkedin": "https://linkedin.com/company/alpayneo"
   },
   {
+    "name": "Alqadark",
+    "foundedYear": 2024,
+    "categoryIds": [
+      "realestate",
+      "marketplace"
+    ],
+    "website": "https://alqadark.fr"
+  },
+  {
     "name": "ALSINA AI",
     "foundedYear": 2025,
     "categoryIds": [
@@ -44,6 +71,15 @@
     ],
     "website": "https://amentech.dz",
     "linkedin": "https://linkedin.com/company/amentech"
+  },
+  {
+    "name": "Auto DZ",
+    "foundedYear": 2024,
+    "categoryIds": [
+      "marketplace", "mobility", "saas"
+    ],
+    "website": "https://autodz.app",
+    "linkedin": "https://www.linkedin.com/company/autodzapp"
   },
   {
     "name": "AYAWAY",
@@ -616,6 +652,15 @@
     "linkedin": "https://linkedin.com/company/prizyglobal"
   },
   {
+    "name": "Profelio",
+    "foundedYear": 2025,
+    "categoryIds": [
+      "technology"
+    ],
+    "website": "https://profelio.com",
+    "linkedin": "https://www.linkedin.com/company/profelio"
+  },
+  {
     "name": "ProntoPlan",
     "foundedYear": 2025,
     "categoryIds": [
@@ -715,6 +760,15 @@
     ],
     "website": "https://www.signlingoapp.com",
     "linkedin": "https://linkedin.com/company/signlingoapp"
+  },
+  {
+    "name": "SihaClub",
+    "foundedYear": 2025,
+    "categoryIds": [
+      "edtech", "foodtech", "healthtech"
+    ],
+    "website": "https://sihaclub2.com",
+    "linkedin": "https://www.linkedin.com/company/sihaclub"
   },
   {
     "name": "Siine",
@@ -867,6 +921,14 @@
     "linkedin": "https://linkedin.com/company/tisura-labs"
   },
   {
+    "name": "Track it",
+    "foundedYear": 2023,
+    "categoryIds": [
+      "logistics"
+    ],
+    "website": "https://trkit.co"
+  },
+  {
     "name": "UpGrowth",
     "foundedYear": 2023,
     "categoryIds": [
@@ -955,13 +1017,5 @@
     ],
     "website": "https://yinvesti.com",
     "linkedin": "https://linkedin.com/company/yinvesti"
-  },
-  {
-    "name": "Zamili",
-    "foundedYear": 2025,
-    "categoryIds": [
-      "saas"
-    ],
-    "website": "https://www.zamili.ai"
   }
 ]
