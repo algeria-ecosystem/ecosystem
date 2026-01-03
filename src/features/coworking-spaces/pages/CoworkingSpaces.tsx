@@ -7,6 +7,7 @@ import Footer from '@/shared/components/Footer';
 import coworkingSpacesData from '@/data/coworking-spaces.json';
 import type { CoworkingSpace } from '../types';
 import type { SortOrder } from '@/shared/types';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const coworkingSpaces: CoworkingSpace[] = coworkingSpacesData;
 
@@ -17,6 +18,7 @@ const CoworkingSpaces = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedCity, setSelectedCity] = useState<string>('all');
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const { t } = useLanguage()
 
   // Extract unique cities from coworking spaces
   const availableCities = useMemo(() => {
@@ -81,11 +83,11 @@ const CoworkingSpaces = () => {
   return (
     <div className="min-h-screen bg-background">
       <main className="container py-4 sm:py-6 px-4 sm:px-6">
-        <Header 
-          title="Co-Working Spaces"
-          description="Find co-working spaces and collaborative work environments in Algeria."
+        <Header
+          title="coworking"
+          description="coworkingDesc"
         />
-        
+
         <section className="space-y-4 sm:space-y-6">
           <SimpleFilterBar
             sortOrder={sortOrder}
@@ -99,7 +101,7 @@ const CoworkingSpaces = () => {
             selectedCity={selectedCity}
             onCityChange={handleCityChange}
           />
-          
+
           <CoworkingSpaceGrid
             coworkingSpaces={paginatedCoworkingSpaces}
             onClearFilters={handleClearFilters}
@@ -111,7 +113,7 @@ const CoworkingSpaces = () => {
             onPageChange={setCurrentPage}
           />
         </section>
-        
+
         <Footer />
       </main>
     </div>

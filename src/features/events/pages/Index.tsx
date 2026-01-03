@@ -7,6 +7,7 @@ import Footer from '@/shared/components/Footer';
 import eventsData from '@/data/events.json';
 import type { Event } from '../types';
 import type { SortOrder } from '@/shared/types';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const events: Event[] = eventsData;
 
@@ -16,6 +17,7 @@ const Index = () => {
   const [sortOrder, setSortOrder] = useState<SortOrder>('desc');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const { t } = useLanguage();
 
   const filteredAndSortedEvents = useMemo(() => {
     let result = [...events];
@@ -60,11 +62,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <main className="container py-4 sm:py-6 px-4 sm:px-6">
-        <Header 
-          title="Events"
-          description="Discover tech events, conferences, and meetups happening in Algeria. Stay connected with the latest events in the ecosystem."
+        <Header
+          title="events"
+          description="eventsDesc"
         />
-        
+
         <section className="space-y-4 sm:space-y-6">
           <SimpleFilterBar
             sortOrder={sortOrder}
@@ -75,7 +77,7 @@ const Index = () => {
             filteredCount={filteredAndSortedEvents.length}
             searchPlaceholder="Search events..."
           />
-          
+
           <EventGrid
             events={paginatedEvents}
             onClearFilters={handleClearFilters}
@@ -87,7 +89,7 @@ const Index = () => {
             onPageChange={setCurrentPage}
           />
         </section>
-        
+
         <Footer />
       </main>
     </div>

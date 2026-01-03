@@ -7,18 +7,19 @@ import Footer from '@/shared/components/Footer';
 import acceleratorsData from '@/data/accelerators.json';
 import type { Accelerator } from '../types';
 import type { SortOrder } from '@/shared/types';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const accelerators: Accelerator[] = acceleratorsData;
 
 const ITEMS_PER_PAGE = 9;
 
 const Accelerators = () => {
+  const { t } = useLanguage();
   const [sortOrder, setSortOrder] = useState<SortOrder>('desc');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedCity, setSelectedCity] = useState<string>('all');
   const [currentPage, setCurrentPage] = useState<number>(1);
 
-  // Extract unique cities from accelerators
   const availableCities = useMemo(() => {
     const cities = accelerators
       .map((accelerator) => accelerator.city)
@@ -31,32 +32,29 @@ const Accelerators = () => {
   const filteredAndSortedAccelerators = useMemo(() => {
     let result = [...accelerators];
 
-    // Filter by city
     if (selectedCity !== 'all') {
       result = result.filter((accelerator) => accelerator.city === selectedCity);
     }
 
-    // Filter by search query
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase().trim();
-      result = result.filter((accelerator) =>
-        accelerator.name.toLowerCase().includes(query) ||
-        accelerator.description.toLowerCase().includes(query) ||
-        (accelerator.city && accelerator.city.toLowerCase().includes(query))
+      result = result.filter(
+        (accelerator) =>
+          accelerator.name.toLowerCase().includes(query) ||
+          accelerator.description.toLowerCase().includes(query) ||
+          (accelerator.city && accelerator.city.toLowerCase().includes(query))
       );
     }
 
-    // Sort by founded year
-    result.sort((a, b) => {
-      return sortOrder === 'desc'
+    result.sort((a, b) =>
+      sortOrder === 'desc'
         ? b.foundedYear - a.foundedYear
-        : a.foundedYear - b.foundedYear;
-    });
+        : a.foundedYear - b.foundedYear
+    );
 
     return result;
   }, [sortOrder, searchQuery, selectedCity]);
 
-  // Pagination
   const totalPages = Math.ceil(filteredAndSortedAccelerators.length / ITEMS_PER_PAGE);
   const paginatedAccelerators = useMemo(() => {
     const start = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -82,11 +80,11 @@ const Accelerators = () => {
   return (
     <div className="min-h-screen bg-background">
       <main className="container py-4 sm:py-6 px-4 sm:px-6">
-        <Header 
-          title="Accelerators"
-          description="Discover accelerators providing mentorship, funding, and growth opportunities for startups in Algeria."
+        <Header
+          title="accelerators"
+          description="acceleratorsDesc"
         />
-        
+
         <section className="space-y-4 sm:space-y-6">
           <SimpleFilterBar
             sortOrder={sortOrder}
@@ -100,7 +98,7 @@ const Accelerators = () => {
             selectedCity={selectedCity}
             onCityChange={handleCityChange}
           />
-          
+
           <AcceleratorGrid
             accelerators={paginatedAccelerators}
             onClearFilters={handleClearFilters}
@@ -112,7 +110,6 @@ const Accelerators = () => {
             onPageChange={setCurrentPage}
           />
         </section>
-        
         <Footer />
       </main>
     </div>
@@ -120,4 +117,3 @@ const Accelerators = () => {
 };
 
 export default Accelerators;
-

@@ -7,6 +7,7 @@ import Footer from '@/shared/components/Footer';
 import categoriesData from '@/data/media_category.json';
 import mediaData from '@/data/media.json';
 import type { MediaCategory, Media } from '../types';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const categories: MediaCategory[] = categoriesData;
 const media: Media[] = mediaData;
@@ -17,6 +18,7 @@ const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const { t } = useLanguage()
 
   // Extract only used categories from media
   const usedCategories = useMemo(() => {
@@ -71,11 +73,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <main className="container py-4 sm:py-6 px-4 sm:px-6">
-        <Header 
-          title="Media"
-          description="Discover podcasts, videos, and newsletters from the Algerian ecosystem."
+        <Header
+          title="media"
+          description="mediaDesc"
         />
-        
+
         <section className="space-y-4 sm:space-y-6">
           <FilterBar
             categories={usedCategories}
@@ -86,7 +88,7 @@ const Index = () => {
             totalCount={media.length}
             filteredCount={filteredMedia.length}
           />
-          
+
           <MediaGrid
             media={paginatedMedia}
             categories={categories}
@@ -99,7 +101,7 @@ const Index = () => {
             onPageChange={setCurrentPage}
           />
         </section>
-        
+
         <Footer />
       </main>
     </div>

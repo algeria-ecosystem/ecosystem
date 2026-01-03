@@ -1,30 +1,45 @@
-import { Rocket, Building2, Zap, Users, Radio, Briefcase, MessageCircle, Calendar, BookOpen, Info, Plus } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
-import { cn } from '@/lib/utils';
-import { ThemeToggle } from '@/components/ThemeToggle';
+import {
+  Rocket,
+  Building2,
+  Zap,
+  Users,
+  Radio,
+  Briefcase,
+  MessageCircle,
+  Calendar,
+  BookOpen,
+  Info,
+  Plus,
+} from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { LanguageToggle } from "@/components/LanguageToggle";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 interface HeaderProps {
   title?: string;
   description?: string;
 }
 
-const Header = ({ 
-  title = "Startups",
-  description = "Discover the vibrant startup ecosystem of Algeria. Explore innovative companies shaping the future across technology, finance, and beyond."
+const Header = ({
+  title = "startups",
+  description = "startupsDesc",
 }: HeaderProps) => {
   const location = useLocation();
-  
+  const { t } = useLanguage();
+
   const navItems = [
-    { path: '/', label: 'Startups', icon: Rocket },
-    { path: '/incubators', label: 'Incubators', icon: Building2 },
-    { path: '/accelerators', label: 'Accelerators', icon: Zap },
-    { path: '/coworking-spaces', label: 'Co-Working Spaces', icon: Users },
-    { path: '/media', label: 'Media', icon: Radio },
-    { path: '/jobs', label: 'Jobs', icon: Briefcase },
-    { path: '/communities', label: 'Communities', icon: MessageCircle },
-    { path: '/events', label: 'Events', icon: Calendar },
-    { path: '/resources', label: 'Resources', icon: BookOpen },
-    { path: '/about', label: 'About', icon: Info },
+    { path: "/", key: "startups", icon: Rocket },
+    { path: "/incubators", key: "incubators", icon: Building2 },
+    { path: "/accelerators", key: "accelerators", icon: Zap },
+    { path: "/coworking-spaces", key: "coworking", icon: Users },
+    { path: "/media", key: "media", icon: Radio },
+    { path: "/jobs", key: "jobs", icon: Briefcase },
+    { path: "/communities", key: "communities", icon: MessageCircle },
+    { path: "/events", key: "events", icon: Calendar },
+    { path: "/resources", key: "resources", icon: BookOpen },
+    { path: "/about", key: "about", icon: Info },
   ];
 
   return (
@@ -33,17 +48,23 @@ const Header = ({
         <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-primary text-primary-foreground flex-shrink-0">
           <Rocket className="w-6 h-6 sm:w-7 sm:h-7" />
         </div>
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground leading-tight">Algeria Ecosystem</h2>
+
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground leading-tight">
+          {t("headerTitle")}
+        </h2>
+
         <div className="flex items-center flex-shrink-0 mt-1">
           <ThemeToggle />
+          <LanguageToggle />
         </div>
       </div>
-      
+
       {/* Navigation */}
       <nav className="flex flex-wrap justify-center gap-1.5 sm:gap-2 mb-6 sm:mb-8 px-2 max-w-full overflow-x-auto">
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = location.pathname === item.path;
+
           return (
             <Link
               key={item.path}
@@ -56,23 +77,25 @@ const Header = ({
               )}
             >
               <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
-              <span className="hidden min-[375px]:inline">{item.label}</span>
-              <span className="min-[375px]:hidden">{item.label.split(' ')[0]}</span>
+              <span className="hidden min-[375px]:inline">{t(item.key)}</span>
+              <span className="min-[375px]:hidden">{t(item.key).split(" ")[0]}</span>
             </Link>
           );
         })}
       </nav>
-      
+
+      {/* Page Title */}
       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground tracking-tight mb-3 sm:mb-4 px-4">
-        {title}
+        {t(title)}
       </h1>
-      
+
+      {/* Description */}
       <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4">
-        {description}
+        {t(description)}
       </p>
-      
+
       {/* Contribution CTA */}
-      {location.pathname !== '/about' && (
+      {location.pathname !== "/about" && (
         <div className="mt-4 sm:mt-5 px-4">
           <a
             href="https://forms.gle/AiACXXFWwA1inGPJA"
@@ -81,7 +104,7 @@ const Header = ({
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm text-primary hover:bg-primary/10 font-medium transition-colors"
           >
             <Plus className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            <span>Submit Data</span>
+            <span>{t("submitData")}</span>
           </a>
         </div>
       )}
@@ -90,4 +113,3 @@ const Header = ({
 };
 
 export default Header;
-
