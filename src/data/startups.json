@@ -155,6 +155,13 @@
     "website": "https://the-doctor.app"
   },
   {
+    "name": "Docteur 360",
+    "foundedYear": 2022,
+    "categoryIds": ["healthtech"],
+    "website": "https://docteur360.com.dz/",
+    "linkedin": "https://www.linkedin.com/company/docteur-360"
+  },
+  {
     "name": "DZDOC",
     "foundedYear": 2015,
     "categoryIds": ["healthtech"],
