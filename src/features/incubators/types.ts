@@ -5,5 +5,6 @@ export interface Incubator {
   linkedin?: string;
   city?: string;
   mapLocation?: string;
+  incubator_type?: string;
 }
 

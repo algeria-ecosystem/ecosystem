@@ -10,7 +10,7 @@ const IncubatorCard = ({ incubator }: IncubatorCardProps) => {
   const [imageError, setImageError] = useState(false);
   const domain = incubator.website?.replace(/^https?:\/\//, '').replace(/\/$/, '') || '';
   const faviconUrl = domain ? `https://fetchfavicon.com/i/${domain}?size=64` : '';
-  
+
   return (
     <article className="group relative bg-card rounded-2xl border border-border/60 p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1">
       <div className="flex items-start gap-4 mb-5">
@@ -53,14 +53,16 @@ const IncubatorCard = ({ incubator }: IncubatorCardProps) => {
       </div>
 
       <div className="flex items-center justify-between pt-5 border-t border-border/40">
-        <div className="flex items-center gap-2">
-          <Calendar className="w-4 h-4 text-muted-foreground" />
-          <div>
-            <p className="text-xs text-muted-foreground mb-0.5">Founded</p>
-            <p className="text-sm font-semibold text-foreground">{incubator.foundedYear}</p>
+        {incubator.foundedYear && (
+          <div className="flex items-center gap-2">
+            <Calendar className="w-4 h-4 text-muted-foreground" />
+            <div>
+              <p className="text-xs text-muted-foreground mb-0.5">Founded</p>
+              <p className="text-sm font-semibold text-foreground">{incubator.foundedYear}</p>
+            </div>
           </div>
-        </div>
-        
+        )}
+
         <div className="flex items-center gap-2">
           {incubator.mapLocation && (
             <a
