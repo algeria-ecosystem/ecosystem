@@ -74,5 +74,14 @@
     "linkedin": "https://linkedin.com/company/djazairia",
     "city": "Algiers",
     "mapLocation": "https://maps.app.goo.gl/VZTnE3bE1kc855Nm9"
+  },
+  {
+    "name": "ANPT Incubator",
+    "foundedYear": 2010,
+    "description": "The ANPT Incubator is Algeria's leading state-backed hub for digital innovation. It provides a comprehensive support ecosystem for ICT entrepreneurs, offering physical hosting across multiple national technoparks and a Virtual Incubation Program (VIP). The incubator mentors founders through a 4-year journey—from initial ideation and business modeling to the creation and scaling of market-ready startups.",
+    "website": "https://anpt.dz/incubation",
+    "linkedin": "https://www.linkedin.com/company/natp",
+    "city": "Algiers",
+    "mapLocation": "https://maps.app.goo.gl/hf9NX7T1morgKArz8"
   }
 ]
