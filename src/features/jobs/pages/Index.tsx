@@ -7,6 +7,7 @@ import Footer from '@/shared/components/Footer';
 import jobsData from '@/data/jobs.json';
 import type { Job } from '../types';
 import type { SortOrder } from '@/shared/types';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const jobs: Job[] = jobsData;
 
@@ -16,6 +17,7 @@ const Index = () => {
   const [sortOrder, setSortOrder] = useState<SortOrder>('desc');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const { t } = useLanguage()
 
   const filteredAndSortedJobs = useMemo(() => {
     let result = [...jobs];
@@ -60,11 +62,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <main className="container py-4 sm:py-6 px-4 sm:px-6">
-        <Header 
-          title="Job Portals"
-          description="Discover job portals and career opportunities in Algeria. Find your next career move."
+        <Header
+          title="jobs"
+          description="jobsDesc"
         />
-        
+
         <section className="space-y-4 sm:space-y-6">
           <SimpleFilterBar
             sortOrder={sortOrder}
@@ -75,7 +77,7 @@ const Index = () => {
             filteredCount={filteredAndSortedJobs.length}
             searchPlaceholder="Search job portals..."
           />
-          
+
           <JobGrid
             jobs={paginatedJobs}
             onClearFilters={handleClearFilters}
@@ -87,7 +89,7 @@ const Index = () => {
             onPageChange={setCurrentPage}
           />
         </section>
-        
+
         <Footer />
       </main>
     </div>
