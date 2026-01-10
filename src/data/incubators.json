@@ -1,24 +1,276 @@
 [
   {
     "name": "Business Valley",
-    "foundedYear": 2021,
-    "website": "https://linktr.ee/Business.valley",
+    "foundedYear":  2021,
+    "website": "https://linktr.ee/Business. valley",
     "linkedin": "https://www.linkedin.com/company/business-valley",
     "city": "Batna",
-    "mapLocation": "https://maps.app.goo.gl/tXuA5AQN11RQBMkx5"
+    "mapLocation":  "https://maps.app.goo.gl/tXuA5AQN11RQBMkx5",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "WomWork",
+    "website": "https://www.theannexdz.net",
+    "city": "Algiers",
+    "incubator_type": "private"
+  },
+  {
+    "name": "8 Mai 1945 Guelma University Incubator",
+    "website": "https://polepro.univ-guelma. dz/",
+    "city": "Guelma",
+    "incubator_type":  "university"
+  },
+  {
+    "name": "Blida 1 Incubator",
+    "website": "https://blidauniversitycareercenter.com/",
+    "city": "Blida",
+    "incubator_type":  "university"
+  },
+  {
+    "name": "Bubble Algerie",
+    "website": "http://bubblealgerie.com/",
+    "city": "Algiers",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "Djanet Incubator",
+    "website": "https://mobilis.dz/",
+    "city": "Algiers",
+    "incubator_type": "private"
   },
   {
     "name": "Crearena",
     "foundedYear": 2020,
     "website": "https://crearena.io",
     "linkedin": "https://linkedin.com/company/crearena",
-    "city": "Blida"
+    "city": "Blida",
+    "mapLocation":  "https://www.google.com/maps?q=36.489506,2.838858",
+    "incubator_type": "private"
   },
   {
-    "name": "Djazairia",
-    "foundedYear": 2025,
+    "name":  "Smart Consulting and Training Academy",
+    "website": "http://www.smartalgerie.com",
+    "city": "Touggourt",
+    "mapLocation": "https://www.google.com/maps?q=36.72486,3.174998",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "A Souf T. T (Souf Business Booster)",
+    "city": "El Oued",
+    "mapLocation": "https://www.google.com/maps?q=33.356589,6.850517",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "Westinnov Incube & Accelerate by Idenet",
+    "city": "Oran",
+    "mapLocation":  "https://www.google.com/maps?q=35.700992,-0.628205",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "Makers Lab",
+    "foundedYear": 2021,
+    "website": "https://makerslab.dz",
+    "linkedin": "https://www.linkedin.com/company/dz-makers-lab",
+    "city":  "Oran",
+    "mapLocation":  "https://maps.app.goo.gl/4rshHwDz977S6nVz9",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "Tek2hub by Brenco",
+    "city": "Algiers, Béchar",
+    "incubator_type": "private"
+  },
+  {
+    "name": "Sylabs",
+    "foundedYear":  2015,
     "linkedin": "https://linkedin.com/company/djazairia",
+    "city": "Algiers",
+    "mapLocation": "https://maps.app.goo.gl/VZTnE3bE1kc855Nm9",
+    "incubator_type": "private"
+  },
+  {
+    "name": "Algeria Venture",
+    "website": "https://www.algeriaventure.net",
+    "city": "Algiers",
+    "mapLocation": "https://www.google.com/maps?q=36.742975,2.970254",
+    "incubator_type": "public"
+  },
+  {
+    "name": "Sarl Incubate IT",
+    "city": "Sétif",
+    "mapLocation":  "https://www.google.com/maps?q=36.18733,5.440893",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "M'Sila University Incubator",
+    "city": "M'Sila",
+    "mapLocation": "https://www.google.com/maps?q=35.713629,4.524543",
+    "incubator_type": "university"
+  },
+  {
+    "name":  "Boumerdes University Incubator",
+    "city": "Boumerdès",
+    "mapLocation": "https://www.google.com/maps?q=36.75765,3.458428",
+    "incubator_type": "university"
+  },
+  {
+    "name":  "Constantine 2 University Incubator",
+    "website": "https://www.univ-constantine2.dz/incubator/",
+    "city": "Constantine",
+    "mapLocation": "https://www.google.com/maps?q=36.246049,6.567818",
+    "incubator_type": "university"
+  },
+  {
+    "name":  "ENSA Incubator (National Higher School of Agronomy)",
+    "website": "http://www.ensa.dz",
+    "city": "Algiers",
+    "mapLocation":  "https://www.google.com/maps?q=36.722082,3.147493",
+    "incubator_type": "university"
+  },
+  {
+    "name":  "National Polytechnic School Technology Incubator",
+    "website": "https://www.enp.edu.dz/fr/incubateur2/",
+    "city": "Algiers",
+    "mapLocation":  "https://www.google.com/maps?q=36.723179,3.148578",
+    "incubator_type": "university"
+  },
+  {
+    "name":  "Industrial Technologies Research Center",
+    "website": "https://www.crti.dz",
+    "city": "Algiers",
+    "mapLocation":  "https://www.google.com/maps?q=36.758071,2.960911",
+    "incubator_type": "university"
+  },
+  {
+    "name":  "Leancubator",
+    "foundedYear": 2020,
+    "website": "https://leancubator.com",
+    "linkedin": "https://linkedin.com/company/leancubatordz",
+    "city": "Algiers",
+    "mapLocation": "https://maps.app.goo.gl/TLF7kaEUPRvWtH6CA",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "IncubMe",
+    "foundedYear":  2018,
+    "website": "https://incubme.com",
+    "linkedin": "https://linkedin.com/company/incubme",
+    "city": "Algiers",
+    "mapLocation": "https://maps.app.goo.gl/5P5c22goArhTn8Q29",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "Setif Innovation Hub",
+    "city": "Sétif",
+    "mapLocation": "https://www.google.com/maps?q=36.191318,5.440377",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "Innoest Company",
+    "city": "Tébessa",
+    "mapLocation":  "https://www.google.com/maps?q=35.397942,8.112447",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "Capcowork",
+    "city": "Algiers",
+    "mapLocation": "https://www.google.com/maps?q=36.742738,3.027887",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "Coworkart",
+    "city": "Tizi Ouzou",
+    "mapLocation": "https://www.google.com/maps?q=36.700996,4.035964",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "Algerian Center for Social Entrepreneurship (ACSE)",
+    "city": "Algiers",
+    "mapLocation": "https://www.google.com/maps?q=36.750485,3.054097",
+    "incubator_type": "private"
+  },
+  {
+    "name": "MZI",
+    "city": "Laghouat",
+    "mapLocation": "https://www.google.com/maps?q=33.816478,2.834477",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "Maktabee Services",
+    "city": "Algiers",
+    "mapLocation":  "https://www.google.com/maps?q=36.772584,3.055083",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "SCALY - Entrepreneurship & Innovation Hub",
+    "city": "Sétif",
+    "mapLocation": "https://www.google.com/maps?q=36.202279,5.440614",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "Sarl Hadinat Aamel Mostadam",
+    "website": "https://moostadam. dz",
+    "city": "Boumerdès",
+    "mapLocation": "https://www.google.com/maps?q=36.741112,3.283175",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "Djazairup",
+    "website": "http://djazairup.org/",
+    "city": "Algiers",
+    "mapLocation": "https://www.google.com/maps?q=31.959256,5.332467",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "ABP Space",
+    "website": "https://www.abp-space.com",
+    "city": "Béjaïa",
+    "mapLocation": "https://www.google.com/maps?q=36.74351,5.049618",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "Futuris Institute",
+    "city": "Sétif",
+    "mapLocation": "https://www.google.com/maps?q=36.190839,5.407076",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "Student Center i2E (Innovation, Entrepreneurship and Employment)",
+    "website": "https://www.univ-tlemcen.dz",
+    "city": "Tlemcen",
+    "mapLocation": "https://www.google.com/maps?q=34.9196,-1.303934",
+    "incubator_type": "university"
+  },
+  {
+    "name":  "NAD Center",
+    "city": "Algiers",
+    "mapLocation":  "https://www.google.com/maps?q=36.750904,2.936316",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "Shifter Incubator",
+    "website": "https://www.hygie-pro.com",
+    "city":  "Constantine",
+    "mapLocation": "https://www.google.com/maps?q=36.342972,6.641589",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "Filaha Innov",
+    "city": "Algiers",
+    "mapLocation":  "https://www.google.com/maps?q=36.733142,2.927393",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "Start Hub",
+    "city": "Algiers",
+    "mapLocation":  "https://www.google.com/maps?q=36.740483,3.039067",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "Djazairia",
+    "foundedYear": 2025,
     "website": "https://djazairia.com",
+    "linkedin": "https://linkedin.com/company/djazairia",
     "city": "Algiers",
     "mapLocation": "https://maps.app.goo.gl/EhQwwiGx64Zee6kt8"
   },
@@ -31,48 +283,287 @@
   },
   {
     "name": "Incubia",
-    "foundedYear": 2025,
+    "foundedYear":  2025,
     "website": "https://www.incubia-algerie.com",
     "city": "Oran",
-    "mapLocation": "https://maps.app.goo.gl/kfQVrkq7S27n4U4u9"
-  },
-  {
-    "name": "IncubMe",
-    "foundedYear": 2018,
-    "website": "https://incubme.com",
-    "linkedin": "https://linkedin.com/company/incubme",
-    "city": "Algiers",
-    "mapLocation": "https://maps.app.goo.gl/5P5c22goArhTn8Q29"
-  },
-  {
-    "name": "Leancubator",
-    "foundedYear": 2020,
-    "website": "https://leancubator.com",
-    "linkedin": "https://linkedin.com/company/leancubatordz",
-    "city": "Algiers",
-    "mapLocation": "https://maps.app.goo.gl/TLF7kaEUPRvWtH6CA"
-  },
-  {
-    "name": "Makers Lab",
-    "foundedYear": 2021,
-    "website": "https://makerslab.dz",
-    "linkedin": "https://www.linkedin.com/company/dz-makers-lab",
-    "city": "Oran",
-    "mapLocation": "https://maps.app.goo.gl/4rshHwDz977S6nVz9"
+    "mapLocation":  "https://maps.app.goo.gl/kfQVrkq7S27n4U4u9"
   },
   {
     "name": "Orkids Incubator",
     "foundedYear": 2022,
     "website": "https://orkids-dz.com",
     "linkedin": "https://linkedin.com/company/orkids-dz",
-    "city": "Annaba",
-    "mapLocation": "https://maps.app.goo.gl/VQXgyGtht3pT9LYJA"
+    "city":  "Annaba",
+    "mapLocation":  "https://maps.app.goo.gl/VQXgyGtht3pT9LYJA"
   },
   {
-    "name": "Sylabs",
-    "foundedYear": 2015,
-    "linkedin": "https://linkedin.com/company/djazairia",
+    "name": "VALKYRIE-FIDUCIAIRE",
+    "city": "Oran",
+    "incubator_type": "private"
+  },
+  {
+    "name": "UTINC4. 2",
+    "city": "Tipaza",
+    "incubator_type": "university"
+  },
+  {
+    "name": "ALSTRATO",
+    "city": "Boumerdes",
+    "incubator_type": "private"
+  },
+  {
+    "name": "ENSM INCUBATOR",
+    "city":  "Tipaza",
+    "incubator_type": "university"
+  },
+  {
+    "name": "GREEN INCUBATOR",
+    "city": "Oran",
+    "incubator_type": "private"
+  },
+  {
+    "name": "Ghardaia University Incubator",
+    "city": "Ghardaïa",
+    "incubator_type": "university"
+  },
+  {
+    "name": "IN-HUB",
+    "city":  "Algiers",
+    "incubator_type": "private"
+  },
+  {
+    "name": "STARTDZ",
+    "city": "Sidi Bel Abbes",
+    "incubator_type": "university"
+  },
+  {
+    "name": "INRENOVA",
     "city": "Algiers",
-    "mapLocation": "https://maps.app.goo.gl/VZTnE3bE1kc855Nm9"
+    "incubator_type": "university"
+  },
+  {
+    "name": "Oum El Bouaghi University Incubator",
+    "city": "Oum El Bouaghi",
+    "incubator_type": "university"
+  },
+  {
+    "name":  "AIN TEMOUCHENT INCUBATOR",
+    "city":  "Aïn Temouchent",
+    "incubator_type":  "university"
+  },
+  {
+    "name": "ESAA INCUBATOR",
+    "city": "Algiers",
+    "incubator_type": "university"
+  },
+  {
+    "name": "BATNA TECHNOLOGY INCUBATOR",
+    "city": "Batna",
+    "incubator_type":  "private"
+  },
+  {
+    "name": "ADVALIANS",
+    "city": "Algiers",
+    "incubator_type": "private"
+  },
+  {
+    "name": "Jijel University Incubator",
+    "city": "Jijel",
+    "incubator_type": "university"
+  },
+  {
+    "name": "Khenchela University Business Incubator",
+    "city": "Khenchela",
+    "incubator_type": "university"
+  },
+  {
+    "name": "Tebessa University Incubator",
+    "city": "Tebessa",
+    "incubator_type": "university"
+  },
+  {
+    "name": "Oran 1 University Incubator",
+    "city": "Oran",
+    "incubator_type": "university"
+  },
+  {
+    "name":  "Souk Ahras University Incubator",
+    "website": "https://www.univ-soukahras.dz/",
+    "city": "Souk Ahras",
+    "incubator_type": "university"
+  },
+  {
+    "name": "CRAPC Incubator",
+    "city": "Tipaza",
+    "incubator_type": "university"
+  },
+  {
+    "name": "Constantine 3 University Incubator",
+    "website": "https://univ-constantine3.dz/",
+    "city": "Constantine",
+    "incubator_type": "university"
+  },
+  {
+    "name": "BAGIN",
+    "website": "http://bagservices.net/",
+    "city": "Guelma",
+    "incubator_type": "private"
+  },
+  {
+    "name": "ESSBO Incubator",
+    "website": "http://www.essb-oran. dz/index.php/fr/",
+    "city":  "Oran",
+    "incubator_type": "university"
+  },
+  {
+    "name": "Tamanrasset University Incubator",
+    "city": "Tamanrasset",
+    "incubator_type": "university"
+  },
+  {
+    "name": "TECHNOLOGY. INCUBATOR_ALGIERS1",
+    "website": "https://incubateur. univ-alger. dz",
+    "city": "Algiers",
+    "incubator_type": "university"
+  },
+  {
+    "name": "Emir Abdelkader University Business Incubator",
+    "website": "http://www.univ-emir-constantine.edu.dz/",
+    "city": "Constantine",
+    "incubator_type": "university"
+  },
+  {
+    "name": "ESI Sidi Bel Abbes Incubator",
+    "website": "https://www.esi-sba.dz",
+    "city": "Sidi Bel Abbes",
+    "incubator_type": "university"
+  },
+  {
+    "name": "DIGITAL BEE HIVE",
+    "website": "https://digital-bee-hive.com/",
+    "city": "Bouira",
+    "incubator_type": "private"
+  },
+  {
+    "name": "Emir Synergy",
+    "website": "https://www.emirsynergy.com",
+    "city": "Algiers",
+    "incubator_type":  "private"
+  },
+  {
+    "name": "Algiers 3 University Business Incubator",
+    "city": "Algiers",
+    "incubator_type": "university"
+  },
+  {
+    "name": "Itihad Int",
+    "website": "https://itihad. group",
+    "city": "Algiers",
+    "incubator_type": "private"
+  },
+  {
+    "name": "Horizon Business Space",
+    "website": "http://www.horizon-bs.com/",
+    "city": "Algiers",
+    "incubator_type": "private"
+  },
+  {
+    "name": "Blida 2 University Business Incubator",
+    "website": "https://www.univ-blida2.dz",
+    "city": "Blida",
+    "incubator_type": "university"
+  },
+  {
+    "name": "CoWorkzone",
+    "website": "https://www.co-workzone.com/",
+    "city": "Algiers",
+    "incubator_type": "private"
+  },
+  {
+    "name": "COMET",
+    "website": "https://workincomet.com/",
+    "city": "Algiers",
+    "incubator_type": "private"
+  },
+  {
+    "name": "Ferhat Abbas University Incubator",
+    "website": "https://incubateur.univ-setif.dz/",
+    "city": "Setif",
+    "incubator_type":  "university"
+  },
+  {
+    "name": "ESCF Constantine Incubator",
+    "website": "https://escf-constantine.dz/",
+    "city": "Constantine",
+    "incubator_type":  "university"
+  },
+  {
+    "name": "USTHB-ICOSNET Start-ups Incubator",
+    "website": "https://www.incub-ui.net",
+    "city": "Algiers",
+    "incubator_type": "university"
+  },
+  {
+    "name": "Biskra University Incubator",
+    "website": "https://incubateur.univ-biskra.dz/",
+    "city": "Biskra",
+    "incubator_type":  "university"
+  },
+  {
+    "name": "Adrar University Innovant Project Incubator",
+    "website": "https://www.univ-adrar.edu.dz/",
+    "city": "Adrar",
+    "incubator_type":  "university"
+  },
+  {
+    "name": "Medea University Incubator",
+    "website": "http://www.univ-medea.dz/incubateur",
+    "city": "Medea",
+    "incubator_type": "university"
+  },
+  {
+    "name": "Constantine 1 University Incubator",
+    "city": "Constantine",
+    "incubator_type": "university"
+  },
+  {
+    "name": "Laghouat University Incubator",
+    "website": "https://lagh-univ.dz",
+    "city": "Laghouat",
+    "incubator_type": "university"
+  },
+  {
+    "name": "Chadli Bendjdid El Tarf University",
+    "city": "El Tarf",
+    "incubator_type":  "university"
+  },
+  {
+    "name": "IBDAA Incubator",
+    "city": "Tamanrasset",
+    "incubator_type": "private"
+  },
+  {
+    "name": "BlueGreen Business",
+    "city": "Tipaza",
+    "mapLocation": "https://www.google.com/maps?q=36.746136,3.056818",
+    "incubator_type": "private"
+  },
+  {
+    "name":  "GrowUp in Algeria Incubator",
+    "website": "http://www.netstation. dz",
+    "city": "Tizi Ouzou",
+    "incubator_type": "private"
+  },
+  {
+    "name": "Batna 1 University Incubator",
+    "website": "https://vrpg.univ-batna. dz/",
+    "city":  "Batna",
+    "incubator_type": "university"
+  },
+  {
+    "name": "El Oued University Incubator",
+    "website": "https://www.univ-eloued. dz/incubator/index.php",
+    "city":  "El Oued",
+    "incubator_type": "university"
   }
 ]
